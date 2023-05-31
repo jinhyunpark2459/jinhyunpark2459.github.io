@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Undergrad student at <a href="https://www.cornell.edu/" title="Cornell">Cornell University
 
 profile:
   align: right
