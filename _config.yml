@@ -105,7 +105,6 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 discord_id: # your discord id (18-digit unique numerical identifier)
 
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -139,7 +138,7 @@ related_blog_posts:
 # the information below.
 giscus:
   repo:       # <your-github-user-name>/<your-github-repo-name>
-  repo_id: 
+  repo_id:
   category: Comments             # name of the category under which discussions will be created
   category_id: DIC_kwDOA5PmLc4CTBt6
   mapping: title                 # identify discussions by post title
