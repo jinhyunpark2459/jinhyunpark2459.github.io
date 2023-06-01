@@ -7,18 +7,12 @@ importance: 1
 category: work
 ---
 ### Overview
+One of the challenges of 3D rigid body dynamics is that the angular momentum vector is not always aligned with the angular velocity vector (as it is in the 2D case). In 3D, the two quantities are related by the moment of inertia tensor. To study the complications of 3D rigid body dynamics, I simulated a compound pendulum in 3D.
 
-To study the complications of 3D rigid body dynamics, I simulated a compound pendulum in 3D. The important distinction to me made from a simple pendulum is that a compound pendulum has spatial extent, giving rise to the moment of inertia tensor (as opposed to a scalar moment of inertia in the case of a simple pendulum). I later extend this to a double compound pendulum (hyperlink).
-
+I took two different approaches to solving for the motion of the pendulum: (1) Newton-Euler method and (2) Lagrange method. Both methods are fully explored in the sections below.
 
 To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
