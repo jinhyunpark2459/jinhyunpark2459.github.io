@@ -2,7 +2,7 @@
 layout: page
 title: 3D Single Compound Pendulum
 description: Simulation of a single compound pendulum in 3D using MATLAB.
-img: assets/img/single_pendulum.jpeg
+img: assets/img/single_pendulum.png
 importance: 1
 category: work
 ---
