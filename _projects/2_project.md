@@ -1,8 +1,8 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image
-img: assets/img/3.jpg
+title: 3D Double Compound Pendulum
+description: Simulation of a double compound pendulum in 3D using MATLAB.
+img: assets/img/double_pendulum.jpg
 importance: 2
 category: work
 ---
