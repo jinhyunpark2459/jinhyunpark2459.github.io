@@ -2,7 +2,7 @@
 layout: page
 title: Dynamics Simulations
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Dynamics simulations created using MATLAB.
 nav: true
 nav_order: 2
 display_categories:
