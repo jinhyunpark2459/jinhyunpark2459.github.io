@@ -131,16 +131,28 @@
 <h3 id="newton-euler-method">Newton-Euler Method</h3>
 <p>The Newton-Euler approach is the standard \(\sum \mathbf{F}=m\mathbf{a}\) (linear moment balance) and \(\sum \mathbf{M}=I\mathbf{\alpha}\) (angular momentum balance) approach to the problem.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-sm-center"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
+<p>First, the position of the pendulum can be fully defined by two angles, \(\theta\) and \(\phi\). Hence solving for the motion of the pendulum boils down to solving for the time evolution of these two angles.</p>
 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/angles-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/angles-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/angles-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/angles.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
 
           </article>
 
