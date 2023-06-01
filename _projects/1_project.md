@@ -1,8 +1,8 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
+title: 3D Single Compound Pendulum
+description: Simulation of a single compound pendulum in 3D using MATLAB.
+img: assets/img/single_pendulum.jpeg
 importance: 1
 category: work
 ---
