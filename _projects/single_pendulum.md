@@ -14,16 +14,9 @@ I took two different approaches to solving for the motion of the pendulum: (1) N
 ### Newton-Euler Method
 The Newton-Euler approach is the standard $$ \sum \mathbf{F}=m\mathbf{a} $$ (linear moment balance) and $$ \sum \mathbf{M}=I\mathbf{\alpha} $$ (angular momentum balance) approach to the problem.
 
+First, the position of the pendulum can be fully defined by two angles, $$ \theta $$ and $$ \phi $$. Hence solving for the motion of the pendulum boils down to solving for the time evolution of these two angles.
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/angles.png" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
