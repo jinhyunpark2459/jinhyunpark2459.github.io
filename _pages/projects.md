@@ -1,6 +1,6 @@
 ---
 layout: page
-title: dynamics simulations
+title: Dynamics Simulations
 permalink: /projects/
 description: A growing collection of your cool projects.
 nav: true

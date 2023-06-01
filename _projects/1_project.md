@@ -6,10 +6,10 @@ img: assets/img/single_pendulum.png
 importance: 1
 category: work
 ---
+### Overview
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+To study the complications of 3D rigid body dynamics, I simulated a compound pendulum in 3D. The important distinction to me made from a simple pendulum is that a compound pendulum has spatial extent, giving rise to the moment of inertia tensor (as opposed to a scalar moment of inertia in the case of a simple pendulum). I later extend this to a double compound pendulum (hyperlink).
+
 
 To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
