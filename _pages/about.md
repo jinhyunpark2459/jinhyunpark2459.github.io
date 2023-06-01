@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Undergrad student at <a href="https://www.cornell.edu/" title="Cornell">Cornell University
 
