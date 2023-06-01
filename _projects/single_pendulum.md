@@ -12,7 +12,7 @@ One of the challenges of 3D rigid body dynamics is that the angular momentum vec
 I took two different approaches to solving for the motion of the pendulum: (1) Newton-Euler method and (2) Lagrange method. Both methods are fully explored in the sections below.
 
 ### Newton-Euler Method
-The Newton-Euler approach is the standard '$$ \sum \mathbf{F}=m\mathbf{a} $$' (linear moment balance) and sum.'$$ \sum M=Ia $$' (angular momentum balance) approach to the problem.
+The Newton-Euler approach is the standard $$ \sum \mathbf{F}=m\mathbf{a} $$ (linear moment balance) and $$ \sum \mathbf{M}=I\mathbf{\alpha} $$ (angular momentum balance) approach to the problem.
 
 
 {% raw %}
