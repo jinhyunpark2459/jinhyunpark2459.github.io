@@ -7,16 +7,18 @@ importance: 1
 category: work
 ---
 ### Overview
-One of the challenges of 3D rigid body dynamics is that the angular momentum vector is not always aligned with the angular velocity vector (as it is in the 2D case). In 3D, the two quantities are related by the moment of inertia tensor. To study the complications of 3D rigid body dynamics, I simulated a compound pendulum in 3D.
+One of the challenges of 3D rigid body dynamics is that the angular momentum vector is not always aligned with the angular velocity vector (as it is in the 2D case). In 3D, the two quantities are related by the moment of inertia tensor. To study the complications of 3D rigid body dynamics, I simulated a compound pendulum in 3D. To simplify the math, the pendulum will not be allowed to twist about its longitudinal axis. This is equivalent to connecting the pendulum to the base via a universal joint.  
 
 I took two different approaches to solving for the motion of the pendulum: (1) Newton-Euler method and (2) Lagrange method. Both methods are fully explored in the sections below.
 
 ### Newton-Euler Method
 The Newton-Euler approach is the standard $$ \sum \mathbf{F}=m\mathbf{a} $$ (linear moment balance) and $$ \sum \mathbf{M}=I\mathbf{\alpha} $$ (angular momentum balance) approach to the problem.
 
-First, the position of the pendulum can be fully defined by two angles, $$ \theta $$ and $$ \phi $$. Hence solving for the motion of the pendulum boils down to solving for the time evolution of these two angles.
+In general, you need 6 coordinates to fully describe the position and orientation of a rigid body in 3D space (3 for position and 3 for orientation). Constraining the pendulum to be rigidly attached to the base reduces this to 3 coordinates (3 angles). The no-twist condition reduces this to two angles. I defined these two angles as $$ \theta $$ and $$ \phi $$. Hence solving for the motion of the pendulum boils down to solving for the time evolution of these two angles.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/angles.png" class="img-fluid rounded z-depth-1" %}
     </div>
+
+  Like in any dynamics problem, the next step is to draw a free-body diagram of the system:
