@@ -30,7 +30,12 @@ First, we need to define the body frame. To define the body frame, we need to go
     </div>
 </div>
 
-Using simple geometry, we can find the conversion between  
+Using simple geometry, we can find the transformation equation between the two frames:
+$$
+\hat{x}=\hat{a}_1
+\hat{y}=cos(\theta)\hat{a}_2-sin(\theta)\hat{a}_3
+\hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3
+
 
 Note that The angle that the $$\hat{b}$$ makes with $$\hat{z}$$ is $$\phi$$.
 
