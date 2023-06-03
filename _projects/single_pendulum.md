@@ -18,7 +18,7 @@ In general, you need 6 coordinates to fully describe the position and orientatio
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/angles.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/angles.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -35,11 +35,18 @@ First, we need to define the body frame. To define the body frame, we need to go
 
 Using simple geometry, we can find the transformation equation between the two frames:
 $$
-\hat{x}=\hat{a}_1$$
+\hat{x}=\hat{a}_1
 $$
-\hat{y}=cos(\theta)\hat{a}_2-sin(\theta)\hat{a}_3$$
+
 $$
-\hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3$$
+\hat{y}=cos(\theta)\hat{a}_2-sin(\theta)\hat{a}_3
+$$
+
+$$
+\hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3
+$$
+
+We can put the three equations into a matrix ICA, called the coordinate transformation matrix:
 
 For the second rotation, we rotate frame $$A$$ about $$\hat{a}_2$$ by an angle $$\phi$$ to obtain the body frame $$A=(\hat{b}_1,\hat{b}_2,\hat{b}_3)$$.
 
