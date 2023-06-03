@@ -25,7 +25,7 @@ First, we need to define the body frame. To define the body frame, we need to go
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/body_frame.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/body_frame.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 
 Note that The angle that the $$\hat{b}$$ makes with $$\hat{z}$$ is $$\phi$$.
