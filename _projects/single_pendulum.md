@@ -43,12 +43,10 @@ $$
 
 For the second rotation, we rotate frame $$A$$ about $$\hat{a}_2$$ by an angle $$\phi$$ to obtain the body frame $$A=(\hat{b}_1,\hat{b}_2,\hat{b}_3)$$.
 
-<p align="center">
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/rotation2.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-</p>
 
 Like in any dynamics problem, the next step after defining the reference frame and coordinate system is to draw a free-body diagram of the system:
