@@ -140,7 +140,7 @@
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/angles.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/angles.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -173,9 +173,13 @@
 </div>
 
 <p>Using simple geometry, we can find the transformation equation between the two frames:
-\(\hat{x}=\hat{a}_1\)
-\(\hat{y}=cos(\theta)\hat{a}_2-sin(\theta)\hat{a}_3\)
-\(\hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3\)</p>
+\(\hat{x}=\hat{a}_1\)</p>
+
+\[\hat{y}=cos(\theta)\hat{a}_2-sin(\theta)\hat{a}_3\]
+
+\[\hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3\]
+
+<p>We can put the three equations into a matrix ICA, called the coordinate transformation matrix:</p>
 
 <p>For the second rotation, we rotate frame \(A\) about \(\hat{a}_2\) by an angle \(\phi\) to obtain the body frame \(A=(\hat{b}_1,\hat{b}_2,\hat{b}_3)\).</p>
 
