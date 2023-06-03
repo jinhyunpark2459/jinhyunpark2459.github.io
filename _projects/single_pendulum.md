@@ -18,7 +18,7 @@ In general, you need 6 coordinates to fully describe the position and orientatio
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/angles.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/single_pendulum1/angles.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -28,7 +28,7 @@ First, we need to define the body frame. To define the body frame, we need to go
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/rotation1.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/single_pendulum1/rotation1.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -62,11 +62,37 @@ For the second rotation, we rotate frame $$A$$ about $$\hat{a}_2$$ by an angle $
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/rotation2.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/single_pendulum1/rotation2.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
 Again, we can find the transformation equations between the two frames:
+
+$$
+\hat{a}_1=cos(\phi)\hat{b}_1+sin(\phi)\hat{a}_3
+$$
+
+$$
+\hat{a}_2=\hat{b}_2
+$$
+
+$$
+\hat{a}_3=-sin(\phi)\hat{b}_1+cos(\phi)\hat{b}_3
+$$
+
+Then the transformation matrix from frame $$A$$ to frame $$B$$ is:
+
+$$
+\hat{x}=\hat{a}_1
+$$
+
+$$
+\hat{y}=cos(\theta)\hat{a}_2-sin(\theta)\hat{a}_3
+$$
+
+$$
+\hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3
+$$
 
 $$
 {}^AC^B=
@@ -77,4 +103,14 @@ sin(\phi) & 0 & cos(\phi) \\
 \end{bmatrix}
 $$
 
+Note that these matrices do not rotate a vector in space. Instead, they transform the components of the a vector in one frame to the components in another frame (i.e. change of basis). The vector remains the same vector, but we're essentially expressing the components in another coordinate system.
+
 Like in any dynamics problem, the next step after defining the reference frame and coordinate system is to draw a free-body diagram of the system:
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/single_pendulum1/fbd.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+Then we perform a linear momentum balance:
