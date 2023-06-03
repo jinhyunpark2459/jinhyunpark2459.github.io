@@ -20,14 +20,16 @@ In general, you need 6 coordinates to fully describe the position and orientatio
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/angles.png" class="img-fluid rounded z-depth-1" %}
     </div>
+</div>
 
-First, we need to define the body frame. To define the body frame, we need to go through a series of two rotations. We start with the inertial frame $$I=(\hat{x},\hat{y},\hat{z})$$ and rotate it about $$\hat{x}$$ by an angle $$\theta$$ to obtain an intermediate frame $$A=(\hat{a_1},\hat{a_2},\hat{a_3})$$.
+First, we need to define the body frame. To define the body frame, we need to go through a series of two rotations. We start with the inertial frame $$I=(\hat{x},\hat{y},\hat{z})$$ and rotate it about $$\hat{x}$$ by an angle $$\theta$$ to obtain an intermediate frame $$A=(\hat{a1}_1,\hat{a}_2,\hat{a}_3)$$.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/body_frame.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
+</div>
 
 Note that The angle that the $$\hat{b}$$ makes with $$\hat{z}$$ is $$\phi$$.
 
-  Like in any dynamics problem, the next step after defining the coordinate system is to draw a free-body diagram of the system:
+Like in any dynamics problem, the next step after defining the coordinate system is to draw a free-body diagram of the system:
