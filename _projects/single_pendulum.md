@@ -28,28 +28,25 @@ First, we need to define the body frame. To define the body frame, we need to go
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/rotation2.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/rotation1.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
 
 Using simple geometry, we can find the transformation equation between the two frames:
 $$
-\hat{x}=\hat{a}_1
+\hat{x}=\hat{a}_1$$
 $$
+\hat{y}=cos(\theta)\hat{a}_2-sin(\theta)\hat{a}_3$$
 $$
-\hat{y}=cos(\theta)\hat{a}_2-sin(\theta)\hat{a}_3
-$$
-$$
-\hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3
-$$
+\hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3$$
 
 For the second rotation, we rotate frame $$A$$ about $$\hat{a}_2$$ by an angle $$\phi$$ to obtain the body frame $$A=(\hat{b}_1,\hat{b}_2,\hat{b}_3)$$.
 
 <p align="center">
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/rotation1.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/rotation2.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 </p>
