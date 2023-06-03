@@ -222,12 +222,6 @@
 
 <p>Then the transformation matrix from frame \(A\) to frame \(B\) is:</p>
 
-\[\hat{x}=\hat{a}_1\]
-
-\[\hat{y}=cos(\theta)\hat{a}_2-sin(\theta)\hat{a}_3\]
-
-\[\hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3\]
-
 \[{}^AC^B=
 \begin{bmatrix}
 cos(\phi) &amp; 0 &amp; -sin(\phi) \\
@@ -235,7 +229,9 @@ cos(\phi) &amp; 0 &amp; -sin(\phi) \\
 sin(\phi) &amp; 0 &amp; cos(\phi) \\
 \end{bmatrix}\]
 
-<p>Note that these matrices do not rotate a vector in space. Instead, they transform the components of the a vector in one frame to the components in another frame (i.e. change of basis). The vector remains the same vector, but we’re essentially expressing the components in another coordinate system.</p>
+<p>Note that these matrices do not rotate a vector in space. Instead, they transform the components of the a vector in one frame to the components in another frame (i.e. change of basis). The vector remains the same vector, but we’re essentially expressing the components in another coordinate system. These matrices will come in handy when we’re switching between reference frames.</p>
+
+<p>Also note that</p>
 
 <p>Like in any dynamics problem, the next step after defining the reference frame and coordinate system is to draw a free-body diagram of the system:</p>
 
@@ -260,7 +256,15 @@ sin(\phi) &amp; 0 &amp; cos(\phi) \\
     </div>
 </div>
 
-<p>Then we perform a linear momentum balance:</p>
+<p>It is important that we include the reaction moment \(M_3\) that prevents the pendulum from twisting about its longitudinal axis. Also, we will model the pendulum as a thin rod of length \(l\).</p>
+
+<p>The next step is to perform a linear momentum balance in each of the coordinate directions of the body frame. But before we do so, we must derive an expression for the inertial acceleration of the center of mass of the pendulum in terms of the body frame unit vectors:</p>
+
+<p>In the \hat{b}_1 direction:</p>
+
+<p>In the \hat{b}_2 direction:</p>
+
+<p>In the \hat{b}_3 direction:</p>
 
           </article>
 
