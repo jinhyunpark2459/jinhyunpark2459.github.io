@@ -21,7 +21,7 @@ In general, you need 6 coordinates to fully describe the position and orientatio
         {% include figure.html path="assets/img/angles.png" class="img-fluid rounded z-depth-1" %}
     </div>
 
-First, we need to define the body frame. To define the body frame, we need to go through a series of two rotations. We start with the inertial frame $$I={\hat{x},\hat{y},\hat{z}}$$ and rotate it about $$\hat{x}$$ by an angle $$\theta$$ to obtain an intermediate frame $$A={\hat{a_1},\hat{a_2},\hat{a_3}}. 
+First, we need to define the body frame. To define the body frame, we need to go through a series of two rotations. We start with the inertial frame $$I={\hat{x},\hat{y},\hat{z}}$$ and rotate it about $$\hat{x}$$ by an angle $$\theta$$ to obtain an intermediate frame $$A={\hat{a_1},\hat{a_2},\hat{a_3}}.$$
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
