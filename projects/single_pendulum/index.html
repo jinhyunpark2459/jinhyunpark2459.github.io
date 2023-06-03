@@ -172,7 +172,7 @@
     </div>
 </div>
 
-<p>Using simple geometry, we can find the transformation equation between the two frames:</p>
+<p>Using simple geometric relations, we can find the transformation equation between the two frames:</p>
 
 \[\hat{x}=\hat{a}_1\]
 
@@ -180,9 +180,16 @@
 
 \[\hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3\]
 
-<p>We can put the three equations into a matrix \({}^IC^A\), called the coordinate transformation matrix:</p>
+<p>We can put the three equations into a matrix \({}^IC^A\), called the coordinate transformation matrix from frame \(I\) to frame \(A\):</p>
 
-<p>For the second rotation, we rotate frame \(A\) about \(\hat{a}_2\) by an angle \(\phi\) to obtain the body frame \(A=(\hat{b}_1,\hat{b}_2,\hat{b}_3)\).</p>
+\[{}^IC^A=
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; cos(\theta) &amp; sin(\theta) \\
+0 &amp; -sin(\theta) &amp; cos(\theta) \\
+\end{bmatrix}\]
+
+<p>For the second rotation, we rotate frame \(A\) about \(\hat{a}_2\) by an angle \(\phi\) to obtain the body frame \(B=(\hat{b}_1,\hat{b}_2,\hat{b}_3)\).</p>
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -204,6 +211,15 @@
 
     </div>
 </div>
+
+<p>Again, we can find the transformation equations between the two frames:</p>
+
+\[{}^AC^B=
+\begin{bmatrix}
+cos(\phi) &amp; 0 &amp; -sin(\phi) \\
+0 &amp; 1 &amp; 0 \\
+sin(\phi) &amp; 0 &amp; cos(\phi) \\
+\end{bmatrix}\]
 
 <p>Like in any dynamics problem, the next step after defining the reference frame and coordinate system is to draw a free-body diagram of the system:</p>
 
