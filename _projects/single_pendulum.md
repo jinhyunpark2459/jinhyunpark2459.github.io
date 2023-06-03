@@ -33,7 +33,7 @@ First, we need to define the body frame. To define the body frame, we need to go
 </div>
 
 
-Using simple geometry, we can find the transformation equation between the two frames:
+Using simple geometric relations, we can find the transformation equation between the two frames:
 
 $$
 \hat{x}=\hat{a}_1
@@ -47,14 +47,34 @@ $$
 \hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3
 $$
 
-We can put the three equations into a matrix $${}^IC^A$$, called the coordinate transformation matrix:
+We can put the three equations into a matrix $${}^IC^A$$, called the coordinate transformation matrix from frame $$I$$ to frame $$A$$:
 
-For the second rotation, we rotate frame $$A$$ about $$\hat{a}_2$$ by an angle $$\phi$$ to obtain the body frame $$A=(\hat{b}_1,\hat{b}_2,\hat{b}_3)$$.
+$$
+{}^IC^A=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & cos(\theta) & sin(\theta) \\
+0 & -sin(\theta) & cos(\theta) \\
+\end{bmatrix}
+$$
+
+For the second rotation, we rotate frame $$A$$ about $$\hat{a}_2$$ by an angle $$\phi$$ to obtain the body frame $$B=(\hat{b}_1,\hat{b}_2,\hat{b}_3)$$.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.html path="assets/img/rotation2.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
+Again, we can find the transformation equations between the two frames:
+
+$$
+{}^AC^B=
+\begin{bmatrix}
+cos(\phi) & 0 & -sin(\phi) \\
+0 & 1 & 0 \\
+sin(\phi) & 0 & cos(\phi) \\
+\end{bmatrix}
+$$
 
 Like in any dynamics problem, the next step after defining the reference frame and coordinate system is to draw a free-body diagram of the system:
