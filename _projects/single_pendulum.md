@@ -7,7 +7,7 @@ importance: 1
 category: work
 ---
 ### Overview
-One of the challenges of 3D rigid body dynamics is that the angular momentum vector is not always aligned with the angular velocity vector (as it is in the 2D case). In 3D, the two quantities are related by the moment of inertia tensor. To study the complications of 3D rigid body dynamics, I simulated a compound pendulum in 3D. To simplify the math, the pendulum will not be allowed to twist about its longitudinal axis. This is equivalent to connecting the pendulum to the base via a <a href="https://www.youtube.com/watch?v=LCMZz6YhbOQ&ab_channel=Lesics">universal joint</a>.  
+One of the challenges of 3D rigid body dynamics is that the angular momentum vector is not always aligned with the angular velocity vector (as it is in the 2D case). In 3D, the two quantities are related by the moment of inertia tensor. To study the complications of 3D rigid body dynamics, I simulated a compound pendulum in 3D. To simplify the math, the pendulum will not be allowed to twist about its longitudinal axis. This is equivalent to connecting the pendulum to the base via a <a href="https://www.youtube.com/watch?v=LCMZz6YhbOQ&ab_channel=Lesics">universal joint</a>.
 
 I took two different approaches to solving for the motion of the pendulum: (1) Newton-Euler method and (2) Lagrange method. Both methods are fully explored in the sections below.
 
@@ -83,18 +83,6 @@ $$
 Then the transformation matrix from frame $$A$$ to frame $$B$$ is:
 
 $$
-\hat{x}=\hat{a}_1
-$$
-
-$$
-\hat{y}=cos(\theta)\hat{a}_2-sin(\theta)\hat{a}_3
-$$
-
-$$
-\hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3
-$$
-
-$$
 {}^AC^B=
 \begin{bmatrix}
 cos(\phi) & 0 & -sin(\phi) \\
@@ -103,7 +91,9 @@ sin(\phi) & 0 & cos(\phi) \\
 \end{bmatrix}
 $$
 
-Note that these matrices do not rotate a vector in space. Instead, they transform the components of the a vector in one frame to the components in another frame (i.e. change of basis). The vector remains the same vector, but we're essentially expressing the components in another coordinate system.
+Note that these matrices do not rotate a vector in space. Instead, they transform the components of the a vector in one frame to the components in another frame (i.e. change of basis). The vector remains the same vector, but we're essentially expressing the components in another coordinate system. These matrices will come in handy when we're switching between reference frames.
+
+Also note that
 
 Like in any dynamics problem, the next step after defining the reference frame and coordinate system is to draw a free-body diagram of the system:
 
@@ -113,4 +103,12 @@ Like in any dynamics problem, the next step after defining the reference frame a
     </div>
 </div>
 
-Then we perform a linear momentum balance:
+It is important that we include the reaction moment $$M_3$$ that prevents the pendulum from twisting about its longitudinal axis. Also, we will model the pendulum as a thin rod of length $$l$$.
+
+The next step is to perform a linear momentum balance in each of the coordinate directions of the body frame. But before we do so, we must derive an expression for the inertial acceleration of the center of mass of the pendulum in terms of the body frame unit vectors:
+
+In the \hat{b}_1 direction:
+
+In the \hat{b}_2 direction:
+
+In the \hat{b}_3 direction:
