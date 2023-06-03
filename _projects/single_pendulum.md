@@ -21,13 +21,13 @@ In general, you need 6 coordinates to fully describe the position and orientatio
         {% include figure.html path="assets/img/angles.png" class="img-fluid rounded z-depth-1" %}
     </div>
 
-First, I defined the body frame:
+First, we need to define the body frame. To define the body frame, we need to go through a series of two rotations. We start with frame $$A$$, which is the result
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/body_frame.png" class="img-fluid rounded z-depth-1" %}
     </div>
 
-Note that The angle that the $$b\hat$$ makes with 
+Note that The angle that the $$\hat{b}$$ makes with $$\hat{z}$$ is $$\phi$$.
 
   Like in any dynamics problem, the next step after defining the coordinate system is to draw a free-body diagram of the system:
