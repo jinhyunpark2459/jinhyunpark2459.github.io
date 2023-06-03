@@ -128,10 +128,8 @@
 
 <p>In general, you need 6 coordinates to fully describe the position and orientation of a rigid body in 3D space (three for position and three for orientation). Constraining the pendulum to be rigidly attached to the base reduces this to 3 coordinates (three angles). The no-twist condition further reduces this to two angles. I defined these two angles as \(\theta\) and \(\phi\). Hence solving for the motion of the pendulum boils down to solving for the time evolution of these two angles.</p>
 
-<p align="center">
-</p>
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
         <figure>
 
   <picture>
@@ -151,24 +149,21 @@
     </div>
 </div>
 
-
 <p>First, we need to define the body frame. To define the body frame, we need to go through a series of two rotations. We start with the inertial frame \(I=(\hat{x},\hat{y},\hat{z})\) and rotate it about \(\hat{x}\) by an angle \(\theta\) to obtain an intermediate frame \(A=(\hat{a}_1,\hat{a}_2,\hat{a}_3)\).</p>
 
-<p align="center">
-</p>
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
         <figure>
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/rotation1-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/rotation1-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/rotation1-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/rotation2-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/rotation2-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/rotation2-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/rotation1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/rotation2.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -177,11 +172,10 @@
     </div>
 </div>
 
-
 <p>Using simple geometry, we can find the transformation equation between the two frames:
-\(\hat{x}=\hat{a}_1
-\hat{y}=cos(\theta)\hat{a}_2-sin(\theta)\hat{a}_3
-\hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3\)</p>
+\(\hat{x}=\hat{a}_1\)
+\(\hat{y}=cos(\theta)\hat{a}_2-sin(\theta)\hat{a}_3\)
+\(\hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3\)</p>
 
 <p>For the second rotation, we rotate frame \(A\) about \(\hat{a}_2\) by an angle \(\phi\) to obtain the body frame \(A=(\hat{b}_1,\hat{b}_2,\hat{b}_3)\).</p>
 
@@ -209,7 +203,7 @@
 </div>
 
 
-<p>Like in any dynamics problem, the next step after defining the coordinate system is to draw a free-body diagram of the system:</p>
+<p>Like in any dynamics problem, the next step after defining the reference frame and coordinate system is to draw a free-body diagram of the system:</p>
 
           </article>
 
