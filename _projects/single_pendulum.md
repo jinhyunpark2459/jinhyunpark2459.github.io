@@ -16,27 +16,41 @@ The Newton-Euler approach is the standard $$\sum \mathbf{F}=m\mathbf{a}$$ (linea
 
 In general, you need 6 coordinates to fully describe the position and orientation of a rigid body in 3D space (three for position and three for orientation). Constraining the pendulum to be rigidly attached to the base reduces this to 3 coordinates (three angles). The no-twist condition further reduces this to two angles. I defined these two angles as $$\theta$$ and $$\phi$$. Hence solving for the motion of the pendulum boils down to solving for the time evolution of these two angles.
 
+<p align="center">
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/angles.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+</p>
+
 
 First, we need to define the body frame. To define the body frame, we need to go through a series of two rotations. We start with the inertial frame $$I=(\hat{x},\hat{y},\hat{z})$$ and rotate it about $$\hat{x}$$ by an angle $$\theta$$ to obtain an intermediate frame $$A=(\hat{a}_1,\hat{a}_2,\hat{a}_3)$$.
 
+<p align="center">
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/rotation1.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+</p>
+
 
 Using simple geometry, we can find the transformation equation between the two frames:
 $$
 \hat{x}=\hat{a}_1
 \hat{y}=cos(\theta)\hat{a}_2-sin(\theta)\hat{a}_3
 \hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3
+$$
 
+For the second rotation, we rotate frame $$A$$ about $$\hat{a}_2$$ by an angle $$\phi$$ to obtain the body frame $$A=(\hat{b}_1,\hat{b}_2,\hat{b}_3)$$.
 
-Note that The angle that the $$\hat{b}$$ makes with $$\hat{z}$$ is $$\phi$$.
+<p align="center">
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/rotation1.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+</p>
 
 Like in any dynamics problem, the next step after defining the coordinate system is to draw a free-body diagram of the system:
