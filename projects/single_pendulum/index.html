@@ -134,13 +134,13 @@
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/angles-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/angles-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/angles-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/single_pendulum1/angles-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/single_pendulum1/angles-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/single_pendulum1/angles-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/angles.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/single_pendulum1/angles.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -157,13 +157,13 @@
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/rotation1-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/rotation1-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/rotation1-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/single_pendulum1/rotation1-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/single_pendulum1/rotation1-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/single_pendulum1/rotation1-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/rotation1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/single_pendulum1/rotation1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -197,13 +197,13 @@
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/rotation2-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/rotation2-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/rotation2-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/single_pendulum1/rotation2-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/single_pendulum1/rotation2-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/single_pendulum1/rotation2-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/rotation2.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/single_pendulum1/rotation2.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -214,6 +214,20 @@
 
 <p>Again, we can find the transformation equations between the two frames:</p>
 
+\[\hat{a}_1=cos(\phi)\hat{b}_1+sin(\phi)\hat{a}_3\]
+
+\[\hat{a}_2=\hat{b}_2\]
+
+\[\hat{a}_3=-sin(\phi)\hat{b}_1+cos(\phi)\hat{b}_3\]
+
+<p>Then the transformation matrix from frame \(A\) to frame \(B\) is:</p>
+
+\[\hat{x}=\hat{a}_1\]
+
+\[\hat{y}=cos(\theta)\hat{a}_2-sin(\theta)\hat{a}_3\]
+
+\[\hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3\]
+
 \[{}^AC^B=
 \begin{bmatrix}
 cos(\phi) &amp; 0 &amp; -sin(\phi) \\
@@ -221,7 +235,32 @@ cos(\phi) &amp; 0 &amp; -sin(\phi) \\
 sin(\phi) &amp; 0 &amp; cos(\phi) \\
 \end{bmatrix}\]
 
+<p>Note that these matrices do not rotate a vector in space. Instead, they transform the components of the a vector in one frame to the components in another frame (i.e. change of basis). The vector remains the same vector, but we’re essentially expressing the components in another coordinate system.</p>
+
 <p>Like in any dynamics problem, the next step after defining the reference frame and coordinate system is to draw a free-body diagram of the system:</p>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/single_pendulum1/fbd-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/single_pendulum1/fbd-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/single_pendulum1/fbd-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/single_pendulum1/fbd.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Then we perform a linear momentum balance:</p>
 
           </article>
 
