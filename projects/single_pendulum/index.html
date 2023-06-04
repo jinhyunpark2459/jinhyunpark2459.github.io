@@ -157,13 +157,13 @@
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/single_pendulum1/rotation1-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/single_pendulum1/rotation1-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/single_pendulum1/rotation1-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/single_pendulum/rotation1-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/single_pendulum/rotation1-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/single_pendulum/rotation1-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/single_pendulum1/rotation1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/single_pendulum/rotation1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -197,13 +197,13 @@
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/single_pendulum1/rotation2-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/single_pendulum1/rotation2-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/single_pendulum1/rotation2-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/single_pendulum/rotation2-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/single_pendulum/rotation2-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/single_pendulum/rotation2-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/single_pendulum1/rotation2.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/single_pendulum/rotation2.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -231,7 +231,7 @@ sin(\phi) &amp; 0 &amp; cos(\phi) \\
 
 <p>Note that these matrices do not rotate a vector in space. Instead, they transform the components of the a vector in one frame to the components in another frame (i.e. change of basis). The vector remains the same vector, but we’re essentially expressing the components in another coordinate system. These matrices will come in handy when we’re switching between reference frames.</p>
 
-<p>Also note that</p>
+<p>Also note that, to transform the components in the reverse direction (for example, from \(B\) to \(A\) instead of from \(A\) to \(B\)), we just invert the transformation matrix.</p>
 
 <p>Like in any dynamics problem, the next step after defining the reference frame and coordinate system is to draw a free-body diagram of the system:</p>
 
@@ -241,13 +241,13 @@ sin(\phi) &amp; 0 &amp; cos(\phi) \\
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/single_pendulum1/fbd-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/single_pendulum1/fbd-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/single_pendulum1/fbd-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/single_pendulum/fbd-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/single_pendulum/fbd-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/single_pendulum/fbd-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/single_pendulum1/fbd.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/single_pendulum/fbd.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -260,11 +260,11 @@ sin(\phi) &amp; 0 &amp; cos(\phi) \\
 
 <p>The next step is to perform a linear momentum balance in each of the coordinate directions of the body frame. But before we do so, we must derive an expression for the inertial acceleration of the center of mass of the pendulum in terms of the body frame unit vectors:</p>
 
-<p>In the \hat{b}_1 direction:</p>
+<p>In the \(\hat{b}_1\) direction:</p>
 
-<p>In the \hat{b}_2 direction:</p>
+<p>In the \(\hat{b}_2\) direction:</p>
 
-<p>In the \hat{b}_3 direction:</p>
+<p>In the \(\hat{b}_3\) direction:</p>
 
           </article>
 
