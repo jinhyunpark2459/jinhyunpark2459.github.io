@@ -2,7 +2,7 @@
 layout: page
 title: 3D Single Compound Pendulum
 description: Simulation of a single compound pendulum in 3D using MATLAB.
-img: assets/img/single_pendulum.png
+img: assets/img/single_pendulum/single_pendulum.png
 importance: 1
 category: work
 ---
@@ -28,7 +28,7 @@ First, we need to define the body frame. To define the body frame, we need to go
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/single_pendulum1/rotation1.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/single_pendulum/rotation1.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -62,7 +62,7 @@ For the second rotation, we rotate frame $$A$$ about $$\hat{a}_2$$ by an angle $
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/single_pendulum1/rotation2.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/single_pendulum/rotation2.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -93,13 +93,13 @@ $$
 
 Note that these matrices do not rotate a vector in space. Instead, they transform the components of the a vector in one frame to the components in another frame (i.e. change of basis). The vector remains the same vector, but we're essentially expressing the components in another coordinate system. These matrices will come in handy when we're switching between reference frames.
 
-Also note that
+Also note that, to transform the components in the reverse direction (for example, from $$B$$ to $$A$$ instead of from $$A$$ to $$B$$), we just invert the transformation matrix.
 
 Like in any dynamics problem, the next step after defining the reference frame and coordinate system is to draw a free-body diagram of the system:
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/single_pendulum1/fbd.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/single_pendulum/fbd.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -107,8 +107,8 @@ It is important that we include the reaction moment $$M_3$$ that prevents the pe
 
 The next step is to perform a linear momentum balance in each of the coordinate directions of the body frame. But before we do so, we must derive an expression for the inertial acceleration of the center of mass of the pendulum in terms of the body frame unit vectors:
 
-In the \hat{b}_1 direction:
+In the $$\hat{b}_1$$ direction:
 
-In the \hat{b}_2 direction:
+In the $$\hat{b}_2$$ direction:
 
-In the \hat{b}_3 direction:
+In the $$\hat{b}_3$$ direction:
