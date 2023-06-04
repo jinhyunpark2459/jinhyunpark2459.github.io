@@ -22,9 +22,7 @@ In general, you need 6 coordinates to fully describe the position and orientatio
     </div>
 </div>
 
-
 First, we need to define the body frame. To define the body frame, we need to go through a series of two rotations. We start with the inertial frame $$I=(\hat{x},\hat{y},\hat{z})$$ and rotate it about $$\hat{x}$$ by an angle $$\theta$$ to obtain an intermediate frame $$A=(\hat{a}_1,\hat{a}_2,\hat{a}_3)$$.
-
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -69,7 +67,7 @@ For the second rotation, we rotate frame $$A$$ about $$\hat{a}_2$$ by an angle $
 Again, we can find the transformation equations between the two frames:
 
 $$
-\hat{a}_1=cos(\phi)\hat{b}_1+sin(\phi)\hat{a}_3
+\hat{a}_1=cos(\phi)\hat{b}_1+sin(\phi)\hat{b}_3
 $$
 
 $$
@@ -91,9 +89,18 @@ sin(\phi) & 0 & cos(\phi) \\
 \end{bmatrix}
 $$
 
-Note that these matrices do not rotate a vector in space. Instead, they transform the components of the a vector in one frame to the components in another frame (i.e. change of basis). The vector remains the same vector, but we're essentially expressing the components in another coordinate system. These matrices will come in handy when we're switching between reference frames.
+To obtain the transformation matrix that transforms a vector from frame $$I$$ to frame $$B$$, we simply multiply the two matrices above (the order matters!):
 
-Also note that, to transform the components in the reverse direction (for example, from $$B$$ to $$A$$ instead of from $$A$$ to $$B$$), we just invert the transformation matrix.
+$$
+{}^IC^B={}^AC^B{}^IC^A=
+\begin{bmatrix}
+cos(\phi) & sin(\phi)sin(\theta) & -cos(\theta)sin(\phi) \\
+0 & cos(\theta) & sin(\theta) \\
+sin(\phi) & -cos(\phi)sin(\theta) & cos(\phi)cos(\theta) \\
+\end{bmatrix}
+$$
+
+Note that these matrices do not rotate a vector in space. Instead, they transform the components of the a vector in one frame to the components in another frame (i.e. change of basis). The vector remains the same vector, but we're essentially expressing the components in another coordinate system. These matrices will come in handy when we're switching between reference frames. To transform the components in the reverse direction (for example, from $$B$$ to $$A$$ instead of from $$A$$ to $$B$$), we just invert the transformation matrix.
 
 Like in any dynamics problem, the next step after defining the reference frame and coordinate system is to draw a free-body diagram of the system:
 
@@ -103,9 +110,9 @@ Like in any dynamics problem, the next step after defining the reference frame a
     </div>
 </div>
 
-It is important that we include the reaction moment $$M_3$$ that prevents the pendulum from twisting about its longitudinal axis. Also, we will model the pendulum as a thin rod of length $$l$$.
+It is important that we include the reaction moment $$M_3$$ which prevents the pendulum from twisting about its longitudinal axis. Also, we will model the pendulum as a thin rod of length $$l$$.
 
-The next step is to perform a linear momentum balance in each of the coordinate directions of the body frame. But before we do so, we must derive an expression for the inertial acceleration of the center of mass of the pendulum in terms of the body frame unit vectors:
+The next step is to perform a linear momentum balance in each of the coordinate directions of the body frame. But before we do so, we must derive an expression for the inertial acceleration of the center of mass of the pendulum in terms of the body frame unit vectors. To do this, we differentiate the position vector in frame $$B$$ twice. Notice that the body frame is just a spherical frame of reference with constant $$r$$:
 
 In the $$\hat{b}_1$$ direction:
 
