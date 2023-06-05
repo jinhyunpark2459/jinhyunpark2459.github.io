@@ -124,9 +124,9 @@
 <p>I took two different approaches to solving for the motion of the pendulum: (1) Newton-Euler method and (2) Lagrange method. Both methods are fully explored in the sections below.</p>
 
 <h3 id="newton-euler-method">Newton-Euler Method</h3>
-<p>The Newton-Euler approach is the standard \(\sum \mathbf{F}=m\mathbf{a}\) (linear moment balance) and \(\sum \mathbf{M}=I\mathbf{\alpha}\) (angular momentum balance) approach to the problem. Furthermore, we will take the minimal coordinates approach, meaning that we will take into account the constraints to reduce the degrees of freedom of the system prior to deriving the equations of motion. This is in contrast to the maximal coordinates approach where we allow the system to have maximal degrees of freedom and we introduce constraint equations only at the end, which must be solved simultaneously with the equations of motion.</p>
+<p>The Newton-Euler approach is the standard \(\sum \mathbf{F}=m\mathbf{a}\) (linear moment balance) and \(\sum \mathbf{M}=I\mathbf{\alpha}\) (angular momentum balance) approach to the problem. Furthermore, we will take the minimal coordinates approach, meaning that we will take into account the constraints to reduce the degrees of freedom of the system as much as possible prior to deriving the equations of motion. This is in contrast to the maximal coordinates approach where we allow the system to have maximal degrees of freedom and we introduce constraint equations only at the end, which must be solved simultaneously with the equations of motion.</p>
 
-<p>In general, you need 6 coordinates to fully describe the position and orientation of a rigid body in 3D space (three for position and three for orientation). Constraining the pendulum to be rigidly attached to the base reduces this to 3 coordinates (three angles). The no-twist condition further reduces this to two angles. I defined these two angles as \(\theta\) and \(\phi\) (shown in the figure below). Hence solving for the motion of the pendulum boils down to solving for the time evolution of these two angles.</p>
+<p>In general, you need 6 coordinates to fully describe the position and orientation of a rigid body in 3D space (3 for position and 3 for orientation). Constraining the pendulum to be rigidly attached to the base reduces this to 3 coordinates (3 angles). The no-twist condition further reduces this to two angles. I defined these 2 angles as \(\theta\) and \(\phi\) (shown in the figure below). Hence solving for the motion of the pendulum boils down to solving for the time evolution of these two angles.</p>
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -322,11 +322,13 @@ ml^2/3 &amp; 0 &amp; 0 \\
 
 <p>It is important to note that, had we used a body frame that was not the principal-axes body frame, the equations for angular momentum balance would have been much more complicated due to the inertia tensor having nonzero off-diagonal terms.</p>
 
-<p>Now we have system of 6 equations (3 from LMB, 3 from AMB) for 6 unknowns (\(R_1\), \(R_2\), \(R_3\), \(M_3\), \(\theta\), \(\phi\)). Unlike the maximal coordinates approach, we do not have a separate constraint equation. The constraint that the rod is rigidly attached to the base was already taken into account when we derived an expression for \({}^I\mathbf{a}_{G/O}\). Had we approached this problem using the maximal coordinates approach, we would have had an additional degree of freedom from a third rotation about \(\hat{b}_3\) by an angle \(\psi\) and added a constraint equation \(\dot{\psi}=0\) to our system of equations. We would not have assumed that the pendulum had a fixed length when deriving an expression for \({}^I\mathbf{a}_{G/O}\) and instead would have added a second constraint equation \(x^2+y^2+z^2=l^2\) to our system of equations.</p>
+<p>Now we have system of 6 equations (3 from LMB, 3 from AMB) for 6 unknowns (\(R_1\), \(R_2\), \(R_3\), \(M_3\), \(\ddot{\theta\)}, \(\ddot{\phi\)}). Unlike the maximal coordinates approach, we do not have a separate constraint equation. The constraint that the rod is rigidly attached to the base was already taken into account when we derived an expression for \({}^I\mathbf{a}_{G/O}\). Had we approached this problem using the maximal coordinates approach, we would have had an additional degree of freedom from a third rotation about \(\hat{b}_3\) by an angle \(\psi\) and added a constraint equation \(\dot{\psi}=0\) to our system of equations. Also, we would not have assumed that the pendulum had a fixed length when deriving an expression for \({}^I\mathbf{a}_{G/O}\) and instead would have added a second constraint equation \(x^2+y^2+z^2=l^2\) to our system of equations.</p>
+
+<p>Next step is to solve for the unknowns. Using MATLAB’s ‘solve’ command.</p>
 
 <h3 id="lagrange-method">Lagrange Method</h3>
 
-<h3 id="tips-for-animating-the-solution">Tips for animating the solution</h3>
+<h3 id="tips-for-animating-the-solution">Tips for Animating the Solution</h3>
 
           </article>
 
