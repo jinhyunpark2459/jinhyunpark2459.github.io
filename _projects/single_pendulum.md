@@ -96,9 +96,9 @@ To obtain the transformation matrix that transforms a vector from frame $$I$$ to
 $$
 {}^IC^B={}^AC^B\cdot{}^IC^A=
 \begin{bmatrix}
-cos(\phi) & -sin(\phi)sin(\theta) & -cos(\theta)sin(\phi) \\
-0 & cos(\theta) & -sin(\theta) \\
-sin(\phi) & cos(\phi)sin(\theta) & cos(\phi)cos(\theta) \\
+cos(\phi) & sin(\phi)sin(\theta) & -cos(\theta)sin(\phi) \\
+0 & cos(\theta) & sin(\theta) \\
+sin(\phi) & -cos(\phi)sin(\theta) & cos(\phi)cos(\theta) \\
 \end{bmatrix}
 $$
 
