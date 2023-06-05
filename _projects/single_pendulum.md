@@ -14,7 +14,7 @@ I took two different approaches to solving for the motion of the pendulum: (1) N
 ### Newton-Euler Method
 The Newton-Euler approach is the standard $$\sum \mathbf{F}=m\mathbf{a}$$ (linear moment balance) and $$\sum \mathbf{M}=I\mathbf{\alpha}$$ (angular momentum balance) approach to the problem. Furthermore, we will take the minimal coordinates approach, meaning that we will take into account the constraints to reduce the degrees of freedom of the system as much as possible prior to deriving the equations of motion. This is in contrast to the maximal coordinates approach where we allow the system to have maximal degrees of freedom and we introduce constraint equations only at the end, which must be solved simultaneously with the equations of motion.
 
-In general, you need 6 coordinates to fully describe the position and orientation of a rigid body in 3D space (3 for position and 3 for orientation). Constraining the pendulum to be rigidly attached to the base reduces this to 3 coordinates (3 angles). The no-twist condition further reduces this to two angles. I defined these 2 angles as $$\theta$$ and $$\phi$$ (shown in the figure below). Hence solving for the motion of the pendulum boils down to solving for the time evolution of these two angles.
+In general, you need six coordinates to fully describe the position and orientation of a rigid body in 3D space (three for position and three for orientation). Constraining the pendulum to be rigidly attached to the base reduces this to three coordinates (three angles). The no-twist condition further reduces this to two angles. We will defined these two angles as $$\theta$$ and $$\phi$$ (shown in the figure below). Hence solving for the motion of the pendulum boils down to solving for the time evolution of these two angles.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -51,8 +51,8 @@ $$
 {}^IC^A=
 \begin{bmatrix}
 1 & 0 & 0 \\
-0 & cos(\theta) & -sin(\theta) \\
-0 & sin(\theta) & cos(\theta) \\
+0 & cos(\theta) & sin(\theta) \\
+0 & -sin(\theta) & cos(\theta) \\
 \end{bmatrix}
 $$
 
@@ -139,7 +139,7 @@ $$
 In the $$\hat{b}_3$$ direction:
 
 $$
--\frac{l}{2}(\dot{\phi}^2-\dot{\theta}^2cos^2(\phi))=\frac{1}{m}(-R_3+cos(\phi)cos(\theta)F_g)
+-\frac{l}{2}(\dot{\phi}^2+\dot{\theta}^2cos^2(\phi))=\frac{1}{m}(-R_3+cos(\phi)cos(\theta)F_g)
 $$
 
 Next, we perform angular momentum balance. Because we chose the pendulum's axes of symmetry as the axes of the body frame, the inertia tensor with respect to the body frame is diagonal:
@@ -178,7 +178,7 @@ $$
 In the $$\hat{b}_2$$ direction:
 
 $$
-\frac{ml^2}{3}(\ddot{\phi})+\frac{ml^2}{3}\dot{\theta}^2sin(\phi)cos(\phi)=\frac{-l}{2}F_gcos(\theta)sin(\phi)
+\frac{ml^2}{3}\ddot{\phi}+\frac{ml^2}{3}\dot{\theta}^2sin(\phi)cos(\phi)=\frac{-l}{2}F_gcos(\theta)sin(\phi)
 $$
 
 In the $$\hat{b}_3$$ direction:
