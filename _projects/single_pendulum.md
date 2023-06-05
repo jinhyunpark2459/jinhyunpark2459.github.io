@@ -156,30 +156,33 @@ When the body frame's axes coincide with the body's axes of symmetry, these axes
 We also need the angular velocity vector in the body frame. The angular velocity vector is:
 
 $$
-\mathbf{\omega}=\dot{\theta}\hat{a}_1+\dot{phi}\hat{b}_2
+{}^I\mathbf{\omega}=\dot{\theta}\hat{a}_1+\dot{\phi}\hat{b}_2
 $$
 
 From here, we just use the transformation matrices we previously derived to express everything in terms of $$\hat{b}_1$$, $$\hat{b}_2$$, and $$\hat{b}_3$$:
 
 $$
-\mathbf{\omega}=\dot{theta}cos(\phi)\hat{b}_1+\dot{\phi}\hat{b}_2+\dot{\theta}sin(\phi)\hat{b}_3
+{}^I\mathbf{\omega}=\dot{\theta}cos(\phi)\hat{b}_1+\dot{\phi}\hat{b}_2+\dot{\theta}sin(\phi)\hat{b}_3
 $$
 
-Now we can write the equations for the angular momentum balance about the center of mass of the pendulum in the principal-axes body frame. Like with the linear momentum balance, we perform the angular momentum balance in each of the body frame coordinate directions. In the \hat{b}_1 direction:
+Now we can write the equations for the angular momentum balance about the center of mass of the pendulum in the principal-axes body frame. Like with the linear momentum balance, we perform the angular momentum balance in each of the body frame coordinate directions. In the $$\hat{b}_1$$ direction:
 
 $$
 \frac{ml^2}{3}(\ddot{\theta}cos(\phi)-\dot{\theta}\dot{\phi}sin(\phi))-\frac{ml^2}{3}\dot{\theta}\dot{\phi}sin(\phi)=\frac{l}{2}F_gsin(\theta)
+$$
 
-In the \hat{b}_2 direction:
+In the $$\hat{b}_2$$ direction:
 
 $$
 \frac{ml^2}{3}(\ddot{\phi})+\frac{ml^2}{3}\dot{\theta}^2sin(\phi)cos(\phi)=\frac{-l}{2}F_gcos(\theta)sin(\phi)
 $$
 
-In the \hat{b}_3 direction:
+In the $$\hat{b}_3$$ direction:
 
 $$
-
+0=M_3
 $$
 
 It is important to note that, had we used a body frame that was not the principal-axes body frame, the equations for angular momentum balance would have been much more complicated due to the inertia tensor having off-diagonal terms.
+
+Now we have 6 equations (3 from LMB, 3 from AMB) for 6 unknowns ($$R_1$$, $$R_2$$, $$R_3$$, $$M_3$$, $$\theta$$, $$\phi$$). Unlike the maximal coordinates approach, we do not have a separate constraint equation. The constraint that the rod is rigidly attached to the base was already incorporated  
