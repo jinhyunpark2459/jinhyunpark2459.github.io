@@ -189,9 +189,9 @@ $$
 
 It is important to note that, had we used a body frame that was not the principal-axes body frame, the equations for angular momentum balance would have been much more complicated due to the inertia tensor having nonzero off-diagonal terms.
 
-Now we have system of 6 equations (3 from LMB, 3 from AMB) for 6 unknowns ($$R_1$$, $$R_2$$, $$R_3$$, $$M_3$$, $$\ddot{\theta$$}, $$\ddot{\phi$$}). Unlike the maximal coordinates approach, we do not have a separate constraint equation. The constraint that the rod is rigidly attached to the base was already taken into account when we derived an expression for $${}^I\mathbf{a}_{G/O}$$. Had we approached this problem using the maximal coordinates approach, we would have had an additional degree of freedom from a third rotation about $$\hat{b}_3$$ by an angle $$\psi$$ and added a constraint equation $$\dot{\psi}=0$$ to our system of equations. Also, we would not have assumed that the pendulum had a fixed length when deriving an expression for $${}^I\mathbf{a}_{G/O}$$ and instead would have added a second constraint equation $$x^2+y^2+z^2=l^2$$ to our system of equations.
+Now we have system of 6 equations (3 from LMB, 3 from AMB) for 6 unknowns ($$R_1$$, $$R_2$$, $$R_3$$, $$M_3$$, $$\ddot{\theta}$$, $$\ddot{\phi}$$). Unlike the maximal coordinates approach, we do not have a separate constraint equation. The constraint that the rod is rigidly attached to the base was already taken into account when we derived an expression for $${}^I\mathbf{a}_{G/O}$$. Had we approached this problem using the maximal coordinates approach, we would have had an additional degree of freedom from a third rotation about $$\hat{b}_3$$ by an angle $$\psi$$ and added a constraint equation $$\dot{\psi}=0$$ to our system of equations. Also, we would not have assumed that the pendulum had a fixed length when deriving an expression for $${}^I\mathbf{a}_{G/O}$$ and instead would have added a second constraint equation $$x^2+y^2+z^2=l^2$$ to our system of equations.
 
-Next step is to solve for the unknowns. Using MATLAB's 'solve' command. 
+Next step is to solve for the unknowns. Using MATLAB's '''solve''' command.
 
 ### Lagrange Method
 
