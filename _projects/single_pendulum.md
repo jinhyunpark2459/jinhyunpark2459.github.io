@@ -119,39 +119,39 @@ It is important that we include the reaction moment $$M_3$$ which prevents the p
 The next step is to perform a linear momentum balance in each of the coordinate directions of the body frame. But before we do so, we must derive an expression for the inertial acceleration of the center of mass of the pendulum in terms of the body frame unit vectors. To do this, we differentiate the position vector in frame $$B$$, $$\mathbf{r}_G/O=\frac{l}{2}\hat{b}_3$$, twice:
 
 $$
-{}^I\mathbf{a}_{G/O}=\fract{l}{2}[(\ddot{\phi}+\dot{\theta}^2sin(\phi)cos(\phi))\hat{b}_1+(\ddot{\theta}cos(\phi)-2\dot{\theta}\dot{\phi}sin(\phi)\hat{b}_2-(\dot{\phi}^2-\dot{\theta}^2cos^2(\phi))\hat{b}_3]
+{}^I\mathbf{a}_{G/O}=\frac{l}{2}[(\ddot{\phi}+\dot{\theta}^2sin(\phi)cos(\phi))\hat{b}_1+(\ddot{\theta}cos(\phi)-2\dot{\theta}\dot{\phi}sin(\phi)\hat{b}_2-(\dot{\phi}^2-\dot{\theta}^2cos^2(\phi))\hat{b}_3]
 $$
 
 Now we perform linear momentum balance in each of the coordinate directions. In the $$\hat{b}_1$$ direction:
 
 $$
-\fract{l}{2}(\ddot{\phi}+\dot{\theta}^2sin(\phi)cos(\phi))=\fract{1}{m}(R_1-cos(\theta)sin(\phi)F_g)
+\frac{l}{2}(\ddot{\phi}+\dot{\theta}^2sin(\phi)cos(\phi))=\frac{1}{m}(R_1-cos(\theta)sin(\phi)F_g)
 $$
 
 In the $$\hat{b}_2$$ direction:
 
 $$
-\fract{l}{2}(\ddot{\theta}cos(\phi)-2\dot{\theta}\dot{\phi}sin{\phi})=\fract{1}{m}(R_2-sin(\theta)F_g)
+\frac{l}{2}(\ddot{\theta}cos(\phi)-2\dot{\theta}\dot{\phi}sin{\phi})=\frac{1}{m}(R_2-sin(\theta)F_g)
 $$
 
 In the $$\hat{b}_3$$ direction:
 
 $$
-\-fract{l}{2}(\dot{\phi}^2-\dot{\theta}^2cos^2(\phi))=\fract{1}{m}(-R_3+cos(\phi)cos(\theta)F_g)
+-\frac{l}{2}(\dot{\phi}^2-\dot{\theta}^2cos^2(\phi))=\frac{1}{m}(-R_3+cos(\phi)cos(\theta)F_g)
 $$
 
-Next, we perform angular momentum balance. Because we chose the pendulum's axes of symmetry as the axes of the body frame, the inertia tensor is diagonal:
+Next, we perform angular momentum balance. Because we chose the pendulum's axes of symmetry as the axes of the body frame, the inertia tensor with respect to the body frame is diagonal:
 
 $$
 I=
 \begin{bmatrix}
-m*l^2/3 & 0 & 0 \\
-0 & m*l^2/3 &  \\
+ml^2/3 & 0 & 0 \\
+0 & ml^2/3 &  \\
 0 & 0 & 0 \\
 \end{bmatrix}
 $$
 
-When the body frame's axes coincide with the body's axes of symmetry, these axes called principal axes. Also, because the rod is thin ($$r<<l$$), the moment of inertia about $$\hat{b}_3$$ is negligible.
+When the body frame's axes coincide with the body's axes of symmetry, these axes called the principal axes. Also, we have used the fact that, because the rod is thin ($$r<<l$$), the moment of inertia about $$\hat{b}_3$$ is negligible.
 
 We also need the angular velocity vector in the body frame. The angular velocity vector is:
 
@@ -159,10 +159,27 @@ $$
 \mathbf{\omega}=\dot{\theta}\hat{a}_1+\dot{phi}\hat{b}_2
 $$
 
-From here, we just use the transformation matrices we previously derived to express everything in terms of $$\hat{b}_1$$, $$\hat{b}_2$$, $$\hat{b}_3$$:
+From here, we just use the transformation matrices we previously derived to express everything in terms of $$\hat{b}_1$$, $$\hat{b}_2$$, and $$\hat{b}_3$$:
 
 $$
 \mathbf{\omega}=\dot{theta}cos(\phi)\hat{b}_1+\dot{\phi}\hat{b}_2+\dot{\theta}sin(\phi)\hat{b}_3
 $$
 
-Now we can write the equations for the angular momentum balance about the center of mass of the pendulum in the principal-axes body frame: 
+Now we can write the equations for the angular momentum balance about the center of mass of the pendulum in the principal-axes body frame. Like with the linear momentum balance, we perform the angular momentum balance in each of the body frame coordinate directions. In the \hat{b}_1 direction:
+
+$$
+\frac{ml^2}{3}(\ddot{\theta}cos(\phi)-\dot{\theta}\dot{\phi}sin(\phi))-\frac{ml^2}{3}\dot{\theta}\dot{\phi}sin(\phi)=\frac{l}{2}F_gsin(\theta)
+
+In the \hat{b}_2 direction:
+
+$$
+\frac{ml^2}{3}(\ddot{\phi})+\frac{ml^2}{3}\dot{\theta}^2sin(\phi)cos(\phi)=\frac{-l}{2}F_gcos(\theta)sin(\phi)
+$$
+
+In the \hat{b}_3 direction:
+
+$$
+
+$$
+
+It is important to note that, had we used a body frame that was not the principal-axes body frame, the equations for angular momentum balance would have been much more complicated due to the inertia tensor having off-diagonal terms.
