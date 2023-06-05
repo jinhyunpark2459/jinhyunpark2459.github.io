@@ -14,7 +14,7 @@ I took two different approaches to solving for the motion of the pendulum: (1) N
 ### Newton-Euler Method
 The Newton-Euler approach is the standard $$\sum \mathbf{F}=m\mathbf{a}$$ (linear moment balance) and $$\sum \mathbf{M}=I\mathbf{\alpha}$$ (angular momentum balance) approach to the problem.
 
-In general, you need 6 coordinates to fully describe the position and orientation of a rigid body in 3D space (three for position and three for orientation). Constraining the pendulum to be rigidly attached to the base reduces this to 3 coordinates (three angles). The no-twist condition further reduces this to two angles. I defined these two angles as $$\theta$$ and $$\phi$$. Hence solving for the motion of the pendulum boils down to solving for the time evolution of these two angles.
+In general, you need 6 coordinates to fully describe the position and orientation of a rigid body in 3D space (three for position and three for orientation). Constraining the pendulum to be rigidly attached to the base reduces this to 3 coordinates (three angles). The no-twist condition further reduces this to two angles. I defined these two angles as $$\theta$$ and $$\phi$$ (shown in the figure below). Hence solving for the motion of the pendulum boils down to solving for the time evolution of these two angles.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -31,18 +31,18 @@ First, we need to define the body frame. To define the body frame, we need to go
 </div>
 
 
-Using simple geometric relations, we can find the transformation equation between the two frames:
+Notice that this is a negative rotation about $$\hat{x}$$ according to the right-hand rule. Using simple geometric relations, we can find the transformation equation between the two frames:
 
 $$
 \hat{x}=\hat{a}_1
 $$
 
 $$
-\hat{y}=cos(\theta)\hat{a}_2-sin(\theta)\hat{a}_3
+\hat{y}=cos(\theta)\hat{a}_2+sin(\theta)\hat{a}_3
 $$
 
 $$
-\hat{z}=sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3
+\hat{z}=-sin(\theta)\hat{a}_2+cos(\theta)\hat{a}_3
 $$
 
 We can put the three equations into a matrix $${}^IC^A$$, called the coordinate transformation matrix from frame $$I$$ to frame $$A$$:
@@ -51,8 +51,8 @@ $$
 {}^IC^A=
 \begin{bmatrix}
 1 & 0 & 0 \\
-0 & cos(\theta) & sin(\theta) \\
-0 & -sin(\theta) & cos(\theta) \\
+0 & cos(\theta) & -sin(\theta) \\
+0 & sin(\theta) & cos(\theta) \\
 \end{bmatrix}
 $$
 
@@ -89,16 +89,20 @@ sin(\phi) & 0 & cos(\phi) \\
 \end{bmatrix}
 $$
 
+A third rotation is unnecessary because the pendulum is not allowed to twist.
+
 To obtain the transformation matrix that transforms a vector from frame $$I$$ to frame $$B$$, we simply multiply the two matrices above (the order matters!):
 
 $$
-{}^IC^B={}^AC^B{}^IC^A=
+{}^IC^B={}^AC^B\cdot{}^IC^A=
 \begin{bmatrix}
-cos(\phi) & sin(\phi)sin(\theta) & -cos(\theta)sin(\phi) \\
-0 & cos(\theta) & sin(\theta) \\
-sin(\phi) & -cos(\phi)sin(\theta) & cos(\phi)cos(\theta) \\
+cos(\phi) & -sin(\phi)sin(\theta) & -cos(\theta)sin(\phi) \\
+0 & cos(\theta) & -sin(\theta) \\
+sin(\phi) & cos(\phi)sin(\theta) & cos(\phi)cos(\theta) \\
 \end{bmatrix}
 $$
+
+The first column of the matrix expresses $$\hat{x}$$ in terms of $$\hat{b}_1$$, $$\hat{b}_2$$, and $$\hat{b}_3$$. The second column expresses $$\hat{y}$$ in terms of $$\hat{b}_1$$, $$\hat{b}_2$$, and $$\hat{b}_3$$. The third column expresses $$\hat{z}$$ in terms of $$\hat{b}_1$$, $$\hat{b}_2$$, and $$\hat{b}_3$$.
 
 Note that these matrices do not rotate a vector in space. Instead, they transform the components of the a vector in one frame to the components in another frame (i.e. change of basis). The vector remains the same vector, but we're essentially expressing the components in another coordinate system. These matrices will come in handy when we're switching between reference frames. To transform the components in the reverse direction (for example, from $$B$$ to $$A$$ instead of from $$A$$ to $$B$$), we just invert the transformation matrix.
 
@@ -106,13 +110,17 @@ Like in any dynamics problem, the next step after defining the reference frame a
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/single_pendulum/fbd.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/single_pendulum/fbd.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
 It is important that we include the reaction moment $$M_3$$ which prevents the pendulum from twisting about its longitudinal axis. Also, we will model the pendulum as a thin rod of length $$l$$.
 
-The next step is to perform a linear momentum balance in each of the coordinate directions of the body frame. But before we do so, we must derive an expression for the inertial acceleration of the center of mass of the pendulum in terms of the body frame unit vectors. To do this, we differentiate the position vector in frame $$B$$ twice. Notice that the body frame is just a spherical frame of reference with constant $$r$$:
+The next step is to perform a linear momentum balance in each of the coordinate directions of the body frame. But before we do so, we must derive an expression for the inertial acceleration of the center of mass of the pendulum in terms of the body frame unit vectors. To do this, we differentiate the position vector in frame $$B$$ twice:
+
+$$
+{}^I\mathbf{a}=l[(\ddot{\phi}+\dot{\theta}^2sin(\phi)cos(\phi))\hat{b}_1+(\ddot{theta}cos(\phi)-2\dot{theta}\dot{phi}sin{\phi})\hat{b}_2-(\dot{phi}^2-\dot{theta}^2cos^2(\phi))\hat{b}_3]
+$$
 
 In the $$\hat{b}_1$$ direction:
 
