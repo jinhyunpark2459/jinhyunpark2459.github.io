@@ -122,7 +122,9 @@ $$
 {}^I\mathbf{a}_{G/O}=\frac{l}{2}[(\ddot{\phi}+\dot{\theta}^2sin(\phi)cos(\phi))\hat{b}_1+(\ddot{\theta}cos(\phi)-2\dot{\theta}\dot{\phi}sin(\phi)\hat{b}_2-(\dot{\phi}^2-\dot{\theta}^2cos^2(\phi))\hat{b}_3]
 $$
 
-Now we perform linear momentum balance in each of the coordinate directions. In the $$\hat{b}_1$$ direction:
+Now we perform linear momentum balance in each of the coordinate directions.
+
+In the $$\hat{b}_1$$ direction:
 
 $$
 \frac{l}{2}(\ddot{\phi}+\dot{\theta}^2sin(\phi)cos(\phi))=\frac{1}{m}(R_1-cos(\theta)sin(\phi)F_g)
@@ -165,7 +167,9 @@ $$
 {}^I\mathbf{\omega}=\dot{\theta}cos(\phi)\hat{b}_1+\dot{\phi}\hat{b}_2+\dot{\theta}sin(\phi)\hat{b}_3
 $$
 
-Now we can write the equations for the angular momentum balance about the center of mass of the pendulum in the principal-axes body frame. Like with the linear momentum balance, we perform the angular momentum balance in each of the body frame coordinate directions. In the $$\hat{b}_1$$ direction:
+Now we can write the equations for the angular momentum balance about the center of mass of the pendulum in the principal-axes body frame. This implies that we must compute the moment exerted by external forces about the center of mass. Like with the linear momentum balance, we consider the angular momentum in each of the body frame coordinate directions separately.
+
+In the $$\hat{b}_1$$ direction:
 
 $$
 \frac{ml^2}{3}(\ddot{\theta}cos(\phi)-\dot{\theta}\dot{\phi}sin(\phi))-\frac{ml^2}{3}\dot{\theta}\dot{\phi}sin(\phi)=\frac{l}{2}F_gsin(\theta)
@@ -183,6 +187,11 @@ $$
 0=M_3
 $$
 
-It is important to note that, had we used a body frame that was not the principal-axes body frame, the equations for angular momentum balance would have been much more complicated due to the inertia tensor having off-diagonal terms.
+It is important to note that, had we used a body frame that was not the principal-axes body frame, the equations for angular momentum balance would have been much more complicated due to the inertia tensor having nonzero off-diagonal terms.
 
-Now we have system of 6 equations (3 from LMB, 3 from AMB) for 6 unknowns ($$R_1$$, $$R_2$$, $$R_3$$, $$M_3$$, $$\theta$$, $$\phi$$). Unlike the maximal coordinates approach, we do not have a separate constraint equation. The constraint that the rod is rigidly attached to the base was already taken into account when we derived an expression for $${}^I\mathbf{a}_{G/O}$$. Had we approached this problem using the maximal coordinates approach, we would have had an additional degree of freedom from a third rotation about $$\hat{b}_3$$ by an angle $$\psi$$ and added a constraint equation $$\dot{\psi}=0$$ to our system of equations. We would not have assumed that the pendulum had a fixed length when deriving an expression for $${}^I\mathbf{a}_{G/O}$$ and instead would have added a second constraint equation $$x^2+y^2+z^2=l^2$$to our system of equations. 
+Now we have system of 6 equations (3 from LMB, 3 from AMB) for 6 unknowns ($$R_1$$, $$R_2$$, $$R_3$$, $$M_3$$, $$\theta$$, $$\phi$$). Unlike the maximal coordinates approach, we do not have a separate constraint equation. The constraint that the rod is rigidly attached to the base was already taken into account when we derived an expression for $${}^I\mathbf{a}_{G/O}$$. Had we approached this problem using the maximal coordinates approach, we would have had an additional degree of freedom from a third rotation about $$\hat{b}_3$$ by an angle $$\psi$$ and added a constraint equation $$\dot{\psi}=0$$ to our system of equations. We would not have assumed that the pendulum had a fixed length when deriving an expression for $${}^I\mathbf{a}_{G/O}$$ and instead would have added a second constraint equation $$x^2+y^2+z^2=l^2$$ to our system of equations.
+
+
+### Lagrange Method
+
+### Tips for animating the solution
