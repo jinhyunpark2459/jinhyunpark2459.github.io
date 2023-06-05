@@ -119,11 +119,23 @@ It is important that we include the reaction moment $$M_3$$ which prevents the p
 The next step is to perform a linear momentum balance in each of the coordinate directions of the body frame. But before we do so, we must derive an expression for the inertial acceleration of the center of mass of the pendulum in terms of the body frame unit vectors. To do this, we differentiate the position vector in frame $$B$$ twice:
 
 $$
-{}^I\mathbf{a}=l[(\ddot{\phi}+\dot{\theta}^2sin(\phi)cos(\phi))\hat{b}_1+(\ddot{theta}cos(\phi)-2\dot{theta}\dot{phi}sin{\phi})\hat{b}_2-(\dot{phi}^2-\dot{theta}^2cos^2(\phi))\hat{b}_3]
+{}^I\mathbf{a}_{G/O}=l[(\ddot{\phi}+\dot{\theta}^2sin(\phi)cos(\phi))\hat{b}_1+(\ddot{\theta}cos(\phi)-2\dot{\theta}\dot{\phi}sin{\phi})\hat{b}_2-(\dot{\phi}^2-\dot{\theta}^2cos^2(\phi))\hat{b}_3]
 $$
 
-In the $$\hat{b}_1$$ direction:
+Now we perform linear momentum balance in each of the coordinate directions. In the $$\hat{b}_1$$ direction:
+
+$$
+
+$$
 
 In the $$\hat{b}_2$$ direction:
 
+$$
+
+$$
+
 In the $$\hat{b}_3$$ direction:
+
+$$
+
+$$
