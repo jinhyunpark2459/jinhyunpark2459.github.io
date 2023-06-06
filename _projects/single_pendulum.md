@@ -51,7 +51,7 @@ $$
 {}^IC^A=
 \begin{bmatrix}
 1 & 0 & 0 \\
-0 & cos(\theta) & sin(\theta) \\
+0 & cos(\theta) & -sin(\theta) \\
 0 & -sin(\theta) & cos(\theta) \\
 \end{bmatrix}
 $$
@@ -97,7 +97,7 @@ $$
 {}^IC^B={}^AC^B\cdot{}^IC^A=
 \begin{bmatrix}
 cos(\phi) & sin(\phi)sin(\theta) & -cos(\theta)sin(\phi) \\
-0 & cos(\theta) & sin(\theta) \\
+0 & cos(\theta) & -sin(\theta) \\
 sin(\phi) & -cos(\phi)sin(\theta) & cos(\phi)cos(\theta) \\
 \end{bmatrix}
 $$
