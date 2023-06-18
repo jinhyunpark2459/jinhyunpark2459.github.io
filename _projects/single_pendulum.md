@@ -234,7 +234,13 @@ $$I_1$$, $$I_2$$, $$I_3$$ are the moments of inertia of the pendulum about the $
 
 $$
 x = \frac{l}{2}sin(\phi)
+$$
+
+$$
 y = \frac{l}{2}cos(\phi)sin(\theta)
+$$
+
+$$
 z = \frac{l}{2}cos(\phi)cos(\theta)
 $$
 
@@ -242,7 +248,13 @@ We can differentiate the three coordinates to get the three velocity components:
 
 $$
 v_x = \frac{l}{2}\dot{\phi}cos(\phi)
+$$
+
+$$
 v_y = -\frac{l}{2}\dot{\phi}sin(\theta)sin(\phi)+\frac{l}{2}\dot{\theta}cos(\theta)cos(\phi)
+$$
+
+$$
 v_z = -\frac{l}{2}\dot{\phi}cos(\theta)sin(\phi)-\frac{l}{2}\dot{\theta}sin(\theta)cos(\phi)
 $$
 
@@ -251,7 +263,7 @@ The three moments of inertia and the angular velocity components were already di
 Next, we need to obtain and expression for the potential energy of the pendulum:
 
 $$
-V = -mgz=\frac{mgl}{2}cos(\phi)cos(\theta)
+V = -mgz=-\frac{mgl}{2}cos(\phi)cos(\theta)
 $$
 
 Now we have an expression for the Lagrangian:
@@ -269,5 +281,7 @@ $$
 where $$q_i$$ are the generalized coordinates of the system. For our system, we have two generalized coordinates $$q_1=\theta$$ and $$q_2=\phi$$. Plugging $$L$$ into the Lagrange's equations will give us two equations (one containing $$\ddot{\theta}$$ and one containing $$\ddot{\phi}$$).
 
 Again, we can use MATLAB to do all of the heavy lifting for us. Same as before, we can take the two equations and solve for $$\ddot{\theta}$$ and $$\ddot{\phi}$$ using the `solve` function. Then store $$\ddot{\theta}$$, $$\ddot{\phi}$$, $$\dot{\theta}$$, $$\dot{\phi}$$ into a vector, turn it into a MATLAB function and pass it to `ode45` to solve for the motion of the pendulum.
+
+
 
 ### Tips for Animating the Solution
