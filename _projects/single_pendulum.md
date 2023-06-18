@@ -116,13 +116,13 @@ Like in any dynamics problem, the next step after defining the reference frame a
 
 It is important that we include the reaction moment $$M_3$$ which prevents the pendulum from twisting about its longitudinal axis. Also, we will model the pendulum as a thin rod of length $$l$$ and mass $$m$$. Notice that the axes of the body frame coincide with the pendulum's axes of symmetry. This was not an arbitrary choice. Choosing the axes of the body frame as the axes of symmetry will greatly simplify the angular momentum balance equations as will be shown later.
 
-The next step is to perform a linear momentum balance in each of the coordinate directions of the body frame. But before we do so, we must derive an expression for the inertial acceleration of the center of mass of the pendulum in terms of the body frame unit vectors. To do this, we differentiate the position vector in frame $$B$$, $$\mathbf{r}_G/O=\frac{l}{2}\hat{b}_3$$, twice:
+The next step is to perform a linear momentum balance in each of the coordinate directions of the body frame. But before we do so, we must derive an expression for the inertial acceleration of the center of mass of the pendulum in terms of the body frame unit vectors. The advantage of doing the linear momentum balance in the body frame is that the expression for the inertial acceleration is greatly simplified. To get the acceleration, we differentiate the position vector in frame $$B$$, $$\mathbf{r}_G/O=\frac{l}{2}\hat{b}_3$$, twice:
 
 $$
 {}^I\mathbf{a}_{G/O}=\frac{l}{2}[(\ddot{\phi}+\dot{\theta}^2sin(\phi)cos(\phi))\hat{b}_1+(\ddot{\theta}cos(\phi)-2\dot{\theta}\dot{\phi}sin(\phi)\hat{b}_2-(\dot{\phi}^2-\dot{\theta}^2cos^2(\phi))\hat{b}_3]
 $$
 
-Now we perform linear momentum balance in each of the coordinate directions.
+Now we write the linear momentum balance equations in each of the coordinate directions.
 
 In the $$\hat{b}_1$$ direction:
 
@@ -147,8 +147,8 @@ Next, we perform angular momentum balance. Because we chose the pendulum's axes 
 $$
 I=
 \begin{bmatrix}
-ml^2/3 & 0 & 0 \\
-0 & ml^2/3 &  \\
+ml^2/12 & 0 & 0 \\
+0 & ml^2/12 &  \\
 0 & 0 & 0 \\
 \end{bmatrix}
 $$
@@ -191,7 +191,7 @@ It is important to note that, had we used a body frame that was not the principa
 
 Now we have system of 6 equations (3 from LMB, 3 from AMB) for 6 unknowns ($$R_1$$, $$R_2$$, $$R_3$$, $$M_3$$, $$\ddot{\theta}$$, $$\ddot{\phi}$$). Unlike the maximal coordinates approach, we do not have a separate constraint equation. The constraint that the rod is rigidly attached to the base was already taken into account when we derived an expression for $${}^I\mathbf{a}_{G/O}$$. Had we approached this problem using the maximal coordinates approach, we would have had an additional degree of freedom from a third rotation about $$\hat{b}_3$$ by an angle $$\psi$$ and added a constraint equation $$\dot{\psi}=0$$ to our system of equations. Also, we would not have assumed that the pendulum had a fixed length when deriving an expression for $${}^I\mathbf{a}_{G/O}$$ and instead would have added a second constraint equation $$x^2+y^2+z^2=l^2$$ to our system of equations.
 
-Next step is to solve for the unknowns. Using MATLAB's '''solve''' command.
+Next step is to solve for the unknowns. Using MATLAB's ''''solve'''' command.
 
 ### Lagrange Method
 
