@@ -326,7 +326,40 @@ ml^2/12 &amp; 0 &amp; 0 \\
 
 <p>Next step is to solve for the unknowns. To do this, I used MATLAB’s symbolic toolbox to write down the six equations symbolically, then used the <code class="language-plaintext highlighter-rouge">solve</code> function to solve for the six unknowns. Then I stored \(\ddot{\theta}\), \(\ddot{\phi}\), \(\dot{\theta}\), \(\dot{\phi}\) into a vector, turned it into a MATLAB function using <code class="language-plaintext highlighter-rouge">matlabFunction</code>, and plugged it in as an input to the <code class="language-plaintext highlighter-rouge">ode45</code> solver to solve for the motion of the pendulum.</p>
 
-<p>The resulting animation of the pendulum with initial conditions $$</p>
+<p>The resulting animation of the pendulum with various initial conditions are below:</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        
+
+<figure>
+
+  
+
+  <iframe src="assets/video/NE_single_pendulum_1.mov" class="img-fluid rounded z-depth-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" width="auto" height="auto"></iframe>
+
+  
+
+</figure>
+
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        
+
+<figure>
+
+  
+
+  <iframe src="assets/video/NE_single_pendulum_2.mov" class="img-fluid rounded z-depth-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" width="auto" height="auto"></iframe>
+
+  
+
+</figure>
+
+    </div>
+</div>
+
+<p>As a sanity check, for the initial conditions , I plotted the energy versus time plot for the pendulum:</p>
 
 <h3 id="lagrange-method">Lagrange Method</h3>
 
