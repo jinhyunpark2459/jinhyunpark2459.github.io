@@ -31,7 +31,7 @@ First, we need to define the body frame. To define the body frame, we need to go
 </div>
 
 
-Notice that this is a negative rotation about $$\hat{x}$$ according to the right-hand rule. Using simple geometric relations, we can find the transformation equation between the two frames:
+Notice that we defined the clockwise direction as positive rotation. Using simple geometric relations, we can find the transformation equation between the two frames:
 
 $$
 \hat{x}=\hat{a}_1
@@ -155,16 +155,16 @@ $$
 
 When the body frame's axes coincide with the body's axes of symmetry, these axes called the principal axes. Also, we have used the fact that, because the rod is thin ($$r<<l$$), the moment of inertia about $$\hat{b}_3$$ is negligible.
 
-We also need the angular velocity vector in the body frame. The angular velocity vector is:
+We also need the angular velocity vector in the body frame. The angular velocity of frame $$B$$ with respect to frame $$I$$ is:
 
 $$
-{}^I\mathbf{\omega}=\dot{\theta}\hat{a}_1+\dot{\phi}\hat{b}_2
+{}^I\mathbf{\omega}^B=-\dot{\theta}\hat{x}+\dot{\phi}\hat{a}_2
 $$
 
 From here, we just use the transformation matrices we previously derived to express everything in terms of $$\hat{b}_1$$, $$\hat{b}_2$$, and $$\hat{b}_3$$:
 
 $$
-{}^I\mathbf{\omega}=\dot{\theta}cos(\phi)\hat{b}_1+\dot{\phi}\hat{b}_2+\dot{\theta}sin(\phi)\hat{b}_3
+{}^I\mathbf{\omega}=-\dot{\theta}cos(\phi)\hat{b}_1+\dot{\phi}\hat{b}_2-\dot{\theta}sin(\phi)\hat{b}_3
 $$
 
 Now we can write the equations for the angular momentum balance about the center of mass of the pendulum in the principal-axes body frame. This implies that we must compute the moment exerted by external forces about the center of mass. Like with the linear momentum balance, we consider the angular momentum in each of the body frame coordinate directions separately.
@@ -172,13 +172,13 @@ Now we can write the equations for the angular momentum balance about the center
 In the $$\hat{b}_1$$ direction:
 
 $$
-\frac{ml^2}{3}(\ddot{\theta}cos(\phi)-\dot{\theta}\dot{\phi}sin(\phi))-\frac{ml^2}{3}\dot{\theta}\dot{\phi}sin(\phi)=\frac{l}{2}F_gsin(\theta)
+\frac{ml^2}{3}(-\ddot{\theta}cos(\phi)+\dot{\theta}\dot{\phi}sin(\phi))+\frac{ml^2}{3}\dot{\theta}\dot{\phi}sin(\phi)=\frac{l}{2}R_2
 $$
 
 In the $$\hat{b}_2$$ direction:
 
 $$
-\frac{ml^2}{3}\ddot{\phi}+\frac{ml^2}{3}\dot{\theta}^2sin(\phi)cos(\phi)=\frac{-l}{2}F_gcos(\theta)sin(\phi)
+\frac{ml^2}{3}\ddot{\phi}+\frac{ml^2}{3}\dot{\theta}^2sin(\phi)cos(\phi)=\frac{-l}{2}R_1
 $$
 
 In the $$\hat{b}_3$$ direction:
