@@ -197,10 +197,10 @@ The resulting animation of the pendulum with various initial conditions are belo
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.html path="assets/video/NE_single_pendulum_1.mov" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.html path="assets/video/NE_single_pendulum_1.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.html path="assets/video/NE_single_pendulum_2.mov" class="img-fluid rounded z-depth-1" controls=true %}
+        {% include video.html path="assets/video/NE_single_pendulum_2.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
 </div>
 
