@@ -282,6 +282,7 @@ where $$q_i$$ are the generalized coordinates of the system. For our system, we 
 
 Again, we can use MATLAB to do all of the heavy lifting for us. Same as before, we can take the two equations and solve for $$\ddot{\theta}$$ and $$\ddot{\phi}$$ using the `solve` function. Then store $$\ddot{\theta}$$, $$\ddot{\phi}$$, $$\dot{\theta}$$, $$\dot{\phi}$$ into a vector, turn it into a MATLAB function and pass it to `ode45` to solve for the motion of the pendulum.
 
-
+I was able to confirm that the equations of motion obtained using the Lagrange method matched the ones I obtained using the Newton-Euler method. As a result, the animation rendered using the Lagrange method was identical to the one rendered using the Newton-Euler method.
 
 ### Tips for Animating the Solution
+To animate the solution, I wrote a function that creates a cylindrical patch object at the desired orientation $$(\theta$$,$$\phi$$). This function takes five arguments: (1) Starting point of the cylinder, (2) radius of the cylinder, (3) length of the cylinder (4) $$\theta$$, and (5) $$\phi$$. My advice is to first create the cylinder using the `cylinder` function (which basically generates a matrix containing the surface points of the cylinder), rotate it by the two angles $$\theta$$ and $$\phi$$, then turn it into a patch object using the `patch` function. You may want to consider writing a separate function for rotating the surface points of the cylinder. This will involve using the <a href="https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula">Rodrigues' rotation formula</a>.
