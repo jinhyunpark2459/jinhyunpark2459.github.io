@@ -193,7 +193,20 @@ Now we have system of 6 equations (3 from LMB, 3 from AMB) for 6 unknowns ($$R_1
 
 Next step is to solve for the unknowns. To do this, I used MATLAB's symbolic toolbox to write down the six equations symbolically, then used the `solve` function to solve for the six unknowns. Then I stored $$\ddot{\theta}$$, $$\ddot{\phi}$$, $$\dot{\theta}$$, $$\dot{\phi}$$ into a vector, turned it into a MATLAB function using `matlabFunction`, and plugged it in as an input to the `ode45` solver to solve for the motion of the pendulum.
 
-The resulting animation of the pendulum with initial conditions $$
+The resulting animation of the pendulum with various initial conditions are below:
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.html path="assets/video/NE_single_pendulum_1.mov" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.html path="assets/video/NE_single_pendulum_2.mov" class="img-fluid rounded z-depth-1" controls=true %}
+    </div>
+</div>
+
+As a sanity check, for the initial conditions , I plotted the energy versus time plot for the pendulum:
+
+
 
 ### Lagrange Method
 
