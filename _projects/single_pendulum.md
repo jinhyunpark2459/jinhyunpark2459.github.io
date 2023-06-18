@@ -212,9 +212,22 @@ As a sanity check, for the initial conditions corresponding to the second video,
     </div>
 </div>
 
+As you can see in the plot, the total mechanical energy stays approximately constant. It does not exactly stay constant due to numerical errors. I also noticed that giving the pendulum a large initial angular velocity amplifies the numerical error that accumulates over time.
 
 ### Lagrange Method
 
+Lagrange method is much simpler than the Newton-Euler method. The Lagrangian of a system is defined as follows:
 
+$$
+L = T - V
+$$
 
+where $$L$$ is the Lagrangian, $$T$$ is the kinetic energy of the system, and $$V$$ is the potential energy of the system.
+
+Once we have an expression for the Lagrangian, the equations of motion are obtained using the Lagrange's equations:
+
+$$
+\frac{d}{dt}(\frac{\partial L}{\partial \dot{q}_i})
+
+$$
 ### Tips for Animating the Solution
