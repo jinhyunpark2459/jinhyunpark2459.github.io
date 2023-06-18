@@ -224,10 +224,21 @@ $$
 
 where $$L$$ is the Lagrangian, $$T$$ is the kinetic energy of the system, and $$V$$ is the potential energy of the system.
 
+For the single compound pendulum system, the kinetic energy is given by:
+
+$$
+T = \frac{1}{2}m(v_x^2+v_y^2+v_z^2)+\frac{1}{2}(I_1\omega_1^2+I_2\omega_2^2+I_3\omega_3^2)
+$$
+
+where $$I_1$$, $$I_2$$, $$I_3$$ are the moments of inertia of the pendulum about the $$\hat{b}_1$$,$$\hat{b}_2$$,and $$\hat{b}_3$$ directions respectively, and $$\omega_1$$, $$\omega_2$$, $$\omega_3$$ are the angular velocity components in the $$\hat{b}_1$$,$$\hat{b}_2$$,and $$\hat{b}_3$$ directions respectively. 
+
 Once we have an expression for the Lagrangian, the equations of motion are obtained using the Lagrange's equations:
+
 $$
 \frac{d}{dt}(\frac{\partial L}{\partial \dot{q}_i})-\frac{\partial L}{\partial q_i}=0
 $$
 
-where $$q_i$$ is the generalized coordinates of the system.
+where $$q_i$$ are the generalized coordinates of the system.
+
+
 ### Tips for Animating the Solution
