@@ -324,9 +324,11 @@ ml^2/12 &amp; 0 &amp; 0 \\
 
 <p>Now we have system of 6 equations (3 from LMB, 3 from AMB) for 6 unknowns (\(R_1\), \(R_2\), \(R_3\), \(M_3\), \(\ddot{\theta}\), \(\ddot{\phi}\)). Unlike the maximal coordinates approach, we do not have a separate constraint equation. The constraint that the rod is rigidly attached to the base was already taken into account when we derived an expression for \({}^I\mathbf{a}_{G/O}\). Had we approached this problem using the maximal coordinates approach, we would have had an additional degree of freedom from a third rotation about \(\hat{b}_3\) by an angle \(\psi\) and added a constraint equation \(\dot{\psi}=0\) to our system of equations. Also, we would not have assumed that the pendulum had a fixed length when deriving an expression for \({}^I\mathbf{a}_{G/O}\) and instead would have added a second constraint equation \(x^2+y^2+z^2=l^2\) to our system of equations.</p>
 
-<p>Next step is to solve for the unknowns. Using MATLAB’s ‘’'’solve’’’’ command.</p>
+<p>Next step is to solve for the unknowns. To do this, I used MATLAB’s symbolic toolbox to write down the six equations symbolically, then used the ‘solve’ function to solve for the six unknowns. Then I stored \(\ddot{\theta}\), \(\ddot{\phi}\), \(\dot{\theta}\), \(\dot{\phi}\) into a vector, turned it into a MATLAB function using ‘matlabFunction’ and plugged it in as an input to the ‘ode45’ solver.</p>
 
 <h3 id="lagrange-method">Lagrange Method</h3>
+
+<h3 id="comparison">Comparison</h3>
 
 <h3 id="tips-for-animating-the-solution">Tips for Animating the Solution</h3>
 
