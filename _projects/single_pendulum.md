@@ -225,9 +225,9 @@ $$
 where $$L$$ is the Lagrangian, $$T$$ is the kinetic energy of the system, and $$V$$ is the potential energy of the system.
 
 Once we have an expression for the Lagrangian, the equations of motion are obtained using the Lagrange's equations:
-
 $$
-\frac{d}{dt}(\frac{\partial L}{\partial \dot{q}_i})
-
+\frac{d}{dt}(\frac{\partial L}{\partial \dot{q}_i})-\frac{\partial L}{\partial q_i}=0
 $$
+
+where $$q_i$$ is the generalized coordinates of the system.
 ### Tips for Animating the Solution
