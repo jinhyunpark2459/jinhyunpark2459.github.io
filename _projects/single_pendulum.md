@@ -204,14 +204,17 @@ The resulting animation of the pendulum with various initial conditions are belo
     </div>
 </div>
 
-As a sanity check, for the initial conditions , I plotted the energy versus time plot for the pendulum:
+As a sanity check, for the initial conditions corresponding to the second video, I plotted the energy versus time plot for the pendulum:
 
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/single_pendulum/energy.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 
 ### Lagrange Method
 
-
-### Comparison
 
 
 ### Tips for Animating the Solution
