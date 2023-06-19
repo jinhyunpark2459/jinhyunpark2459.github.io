@@ -164,7 +164,7 @@ $$
 From here, we just use the transformation matrices we previously derived to express the angular velocity vector in terms of $$\hat{b}_1$$, $$\hat{b}_2$$, and $$\hat{b}_3$$:
 
 $$
-{}^I\mathbf{\omega}=-\dot{\theta}cos(\phi)\hat{b}_1+\dot{\phi}\hat{b}_2-\dot{\theta}sin(\phi)\hat{b}_3
+{}^I\mathbf{\omega}^B=-\dot{\theta}cos(\phi)\hat{b}_1+\dot{\phi}\hat{b}_2-\dot{\theta}sin(\phi)\hat{b}_3
 $$
 
 Now we can write the equations for the angular momentum balance about the center of mass of the pendulum with respect to the body frame. This implies that we must compute the moment exerted by external forces about the center of mass. Like with the linear momentum balance, we consider the angular momentum in each of the basis vector directions separately.
