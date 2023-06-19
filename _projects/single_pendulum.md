@@ -275,7 +275,7 @@ $$
 Once we have an expression for the Lagrangian, the equations of motion can be obtained by plugging in $$L$$ into the Euler-Lagrange equation:
 
 $$
-\frac{d}{dt}(\frac{\partial L}{\partial \dot{q}_i})-\frac{\partial L}{\partial q_i}=0
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_i}\right)-\frac{\partial L}{\partial q_i}=0
 $$
 
 where $$q_i$$ are the generalized coordinates of the system. For our system, we have two generalized coordinates $$q_1=\theta$$ and $$q_2=\phi$$. Plugging $$L$$ into the Euler-Lagrange equation will give us two equations (one containing $$\ddot{\theta}$$ and one containing $$\ddot{\phi}$$).
