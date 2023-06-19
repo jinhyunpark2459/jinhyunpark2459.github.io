@@ -116,9 +116,31 @@
 
           <article>
             <h3 id="overview">Overview</h3>
-<p>In my <a href="https://jinhyunpark2459.github.io/projects/single_pendulum/">previous post</a>, I simulated a single compound pendulum in 3D. In this post, I will be extending this to a double compound pendulum in 3D. I will be using the Lagrange method only. Although the Newton-Euler method will not be explored in this post, it is not conceptually any different than what was done for the single pendulum. The only additional complexity would be that there will be additional reaction forces and moments on the first pendulum.</p>
+<p>In my <a href="https://jinhyunpark2459.github.io/projects/single_pendulum/">previous post</a>, I simulated a single compound pendulum in 3D. In this post, I will be extending this to a double compound pendulum in 3D. I will be using the Lagrange method only. Although the Newton-Euler method will not be explored in this post, it is not conceptually any different than what was done for the single pendulum. The only additional complexity would be that there will be additional reaction forces and moments on the first pendulum. Just as in the single pendulum, the two pendulums will not be allowed to twist about their longitudinal axes.</p>
 
 <h3 id="lagrange-method">Lagrange Method</h3>
+<p>In general, it takes a total of twelve coordinates to fully describe a system with two rigid bodies. Six of these describe the position of the two bodies and the other six describe the orientation of the two bodies. Constraining the first pendulum to be rigidly attached to the base and constraining the second pendulum to be rigidly attached to the first pendulum reduces this to six coordinates. The no-twist condition further reduces this to four coordinates.The four coordinates will be defined as \(\theta_1\), \(\phi_1\), \(\theta_2\), and \(\phi_2\) (see figure below).</p>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/double_pendulum/angles-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/double_pendulum/angles-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/double_pendulum/angles-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/double_pendulum/angles.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
 
           </article>
 
