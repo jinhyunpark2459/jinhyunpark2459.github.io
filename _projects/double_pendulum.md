@@ -18,7 +18,7 @@ In general, it takes a total of twelve coordinates to fully describe a system wi
     </div>
 </div>
 
-We need to define two body frames $$B_1$$ and $$B_2$$, one for each pendulum. The process of deriving the coordinate transformation matrices is same as the <a href="https://jinhyunpark2459.github.io/projects/single_pendulum/">single pendulum case</a>.
+We need to define two body frames $$B_1=(\hat{b}_{1,1},\hat{b}_{1,2},\hat{b}_{1,3})$$ and $$B_2=(\hat{b}_{2,1},\hat{b}_{2,2},\hat{b}_{2,3})$$, one for each pendulum. The process of deriving the coordinate transformation matrices is same as the <a href="https://jinhyunpark2459.github.io/projects/single_pendulum/">single pendulum case</a>.
 
 The angular velocity of the first pendulum is given by the following:
 
