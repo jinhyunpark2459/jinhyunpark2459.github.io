@@ -89,3 +89,28 @@ $$
 $$
 v_{2,z} = -l(\dot{\phi}_1cos(\theta_1)sin(\phi_1)+\dot{\theta}_1sin(\theta_1)cos(\phi_1))-\frac{l}{2}\dot{\phi}_2cos(\theta_2)sin(\phi_2)-\frac{l}{2}\dot{\theta}_2sin(\theta_2)cos(\phi_2)
 $$
+
+Now we have all of the pieces to get an expression for the kinetic energy of the system.
+
+The next step is to obtain expressions for the potential energies of the two pendulums:
+
+$$
+V = -mgz_1 - mgz_2=-\frac{mgl}{2}cos(\phi_1)cos(\theta_1)-mglcos(\phi_2)cos(\theta_2)
+$$
+
+Now that we have all of the pieces, We can use MATLAB's symbolic toolbox to compute the Lagrangian. Then, finally, we can obtain the equations of motion by plugging in $$L$$ into the Euler-Lagrange equation:
+
+$$
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_i}\right)-\frac{\partial L}{\partial q_i}=0
+$$
+
+The generalized coordinates for this system are $$\theta_1$$, $$\phi_1$$, $$\theta_2$$, and $$\phi_2$$.
+
+A compact way of writing the equations of motion is to use the built-in Jacobian function in MATLAB.
+
+````markdown
+q = [theta_1 phi_1 theta_2 phi_2]';
+q_dot = [theta_dot_1 phi_dot_1 theta_dot_2 phi_dot_2]';
+q_ddot = [theta_ddot_1 phi_ddot_1 theta_ddot_2 phi_ddot_2]';
+jacobian(jacobian(L,q_dot),q_dot) * q_ddot + jacobian(jacobian(L,q_dot),q) * q_dot - jacobian(L,q)' == 0;
+````
