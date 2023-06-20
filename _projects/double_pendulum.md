@@ -36,7 +36,7 @@ $$
 T = \frac{1}{2}m(v_{1,x}^2+v_{1,y}^2+v_{1,z}^2)+\frac{1}{2}(I_1\omega_{1,1}^2+I_2\omega_{1,2}^2+I_3\omega_{1,3}^2)+\frac{1}{2}m(v_{2,x}^2+v_{2,y}^2+v_{2,z}^2)+\frac{1}{2}(I_1\omega_{2,1}^2+I_2\omega_{2,2}^2+I_3\omega_{2,3}^2)
 $$
 
-Whenever there are two subscripts, the first subscript will refer to which of the two pendulums and the second subscript will refer to the which component. So for example, $$v_{1,y}$$ is the $$\hat{y}$$ component of the velocity of pendulum 1 and $$\omega_{2,1}$$ is the $$\hat{b}_1$$ component of the angular velocity of pendulum 2.
+Whenever there are two subscripts, the first subscript will refer to which of the two pendulums and the second subscript will refer to the which component. So for example, $$v_{1,y}$$ is the $$\hat{y}$$ component of the velocity of the center of mass (COM) of the pendulum 1 and $$\omega_{2,1}$$ is the $$\hat{b}_1$$ component of the angular velocity of pendulum 2.
 
 As in the single pendulum case, the angular velocity of the first pendulum is given by the following:
 
@@ -50,7 +50,7 @@ $$
 {}^I\mathbf{\omega}^{B_2}=-\dot{\theta}_2cos(\phi_2)\hat{b}_{2,1}+\dot{\phi}_2\hat{b}_{2,2}-\dot{\theta}_2sin(\phi_2)\hat{b}_{2,3}
 $$
 
-The two equations above give us the angular velocity components that we need to compute the kinetic energy of the system. Next, we need to derive expressions for the velocity components of the two pendulums. For the first pendulum, the expression is the same as it was for the single pendulum case:
+The two equations above give us the angular velocity components that we need to compute the kinetic energy of the system. Next, we need to derive expressions for the COM velocity components of the two pendulums. For the first pendulum, the expression is the same as it was for the single pendulum case:
 
 $$
 v_{1,x} = \frac{l}{2}\dot{\phi}_1cos(\phi_1)
@@ -64,8 +64,28 @@ $$
 v_{1,z} = -\frac{l}{2}\dot{\phi}_1cos(\theta_1)sin(\phi_1)-\frac{l}{2}\dot{\theta}_1sin(\theta_1)cos(\phi_1)
 $$
 
-To compute the velocity components of the second pendulum, consider the position vector of the second pendulum:
+To compute the velocity components of the second pendulum, consider the position vector of the COM of the second pendulum:
 
 $$
 \mathbf{r}_{G_2/O}=2\mathbf{r}_{G_1/O}+\mathbf{r}_{G_2/G_1}
+$$
+
+Then the velocity of the COM of second pendulum is:
+
+$$
+\mathbf{v}_{G_2/O}=2\mathbf{v}_{G_1/O}+\mathbf{v}_{G_2/G_1}
+$$
+
+Consequently, COM velocity components of the second pendulum are the following:
+
+$$
+v_{2,x} = l\dot{\phi}_1cos(\phi_1)+\frac{l}{2}\dot{\phi}_2cos(\phi_2)
+$$
+
+$$
+v_{2,y} = -l(\dot{\phi}_1sin(\theta_1)sin(\phi_1)-\dot{\theta}_1cos(\theta_1)cos(\phi_1))-\frac{l}{2}\dot{\phi}_2sin(\theta_2)sin(\phi_2)+\frac{l}{2}\dot{\theta}_2cos(\theta_2)cos(\phi_2)
+$$
+
+$$
+v_{2,z} = -l(\dot{\phi}_1cos(\theta_1)sin(\phi_1)+\dot{\theta}_1sin(\theta_1)cos(\phi_1))-\frac{l}{2}\dot{\phi}_2cos(\theta_2)sin(\phi_2)-\frac{l}{2}\dot{\theta}_2sin(\theta_2)cos(\phi_2)
 $$
