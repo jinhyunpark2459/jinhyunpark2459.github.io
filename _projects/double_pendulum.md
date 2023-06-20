@@ -109,10 +109,12 @@ The generalized coordinates for this system are $$\theta_1$$, $$\phi_1$$, $$\the
 A compact way of writing the equations of motion is to use the built-in Jacobian function in MATLAB.
 
 ````markdown
+```MATLAB
 q = [theta_1 phi_1 theta_2 phi_2]';
 q_dot = [theta_dot_1 phi_dot_1 theta_dot_2 phi_dot_2]';
 q_ddot = [theta_ddot_1 phi_ddot_1 theta_ddot_2 phi_ddot_2]';
 EoM = jacobian(jacobian(L,q_dot),q_dot)\*q_ddot+jacobian(jacobian(L,q_dot),q)\*q_dot-jacobian(L,q)' == 0;
+```
 ````
 
 Then we can solve for $$\ddot{\theta_1}$$, $$\ddot{\phi_1}$$, $$\ddot{\theta_2}$$, $$\ddot{\phi_2}$$ using the `solve` function in MATLAB. Finally, we can store `q_dot` and `q_ddot` into a single vector and plug it into the `ode45` solver to solve for the motion of the double pendulum.
