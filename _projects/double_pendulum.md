@@ -136,4 +136,4 @@ As a sanity check for the solutions, I plotted the energy versus time for the in
     </div>
 </div>
 
-The total mechanical energy is indeed conserved.
+The total mechanical energy of the system is indeed conserved.
