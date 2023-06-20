@@ -67,13 +67,13 @@ $$
 To compute the velocity components of the second pendulum, consider the position vector of the COM of the second pendulum:
 
 $$
-\mathbf{r}_{G_2/O}=2\mathbf{r}_{G_1/O}+\mathbf{r}_{G_2/G_1}
+\mathbf{r}_{G_2/O}=2\mathbf{r}_{G_1/O}+\mathbf{r}_{G_2/O'}
 $$
 
 Then the velocity of the COM of second pendulum is:
 
 $$
-\mathbf{v}_{G_2/O}=2\mathbf{v}_{G_1/O}+\mathbf{v}_{G_2/G_1}
+\mathbf{v}_{G_2/O}=2\mathbf{v}_{G_1/O}+\mathbf{v}_{G_2/O'}
 $$
 
 Consequently, COM velocity components of the second pendulum are the following:
@@ -109,9 +109,31 @@ The generalized coordinates for this system are $$\theta_1$$, $$\phi_1$$, $$\the
 A compact way of writing the equations of motion is to use the built-in Jacobian function in MATLAB.
 
 ````markdown
-```MATLAB
 q = [theta_1 phi_1 theta_2 phi_2]';
 q_dot = [theta_dot_1 phi_dot_1 theta_dot_2 phi_dot_2]';
 q_ddot = [theta_ddot_1 phi_ddot_1 theta_ddot_2 phi_ddot_2]';
-jacobian(jacobian(L,q_dot),q_dot)*q_ddot+jacobian(jacobian(L,q_dot),q)*q_dot-jacobian(L,q)' == 0;
+EoM = jacobian(jacobian(L,q_dot),q_dot)*q_ddot+jacobian(jacobian(L,q_dot),q)*q_dot-jacobian(L,q)' == 0;
 ````
+
+Then we can solve for $$\ddot{\theta_1}$$, $$\ddot{\phi_1}$$, $$\ddot{\theta_2}$$, $$\ddot{\phi_2}$$ using the `solve` function in MATLAB. Finally, we can store `q_dot` and `q_ddot` into a single vector and plug it into the `ode45` solver to solve for the motion of the double pendulum.
+
+Here are the resulting animations of the solution with various initial conditions:
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.html path="assets/video/double_pendulum_1.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.html path="assets/video/double_pendulum_2.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+    </div>
+</div>
+
+As a sanity check for the solutions, I plotted the energy versus time for the initial conditions corresponding to the second video:
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/double_pendulum/energy.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+The total mechanical energy is indeed conserved.
