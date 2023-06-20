@@ -204,11 +204,12 @@
 
 <p>A compact way of writing the equations of motion is to use the built-in Jacobian function in MATLAB.</p>
 
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>q = [theta_1 phi_1 theta_2 phi_2]';
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">MATLAB
+</span><span class="sb">q = [theta_1 phi_1 theta_2 phi_2]';
 q_dot = [theta_dot_1 phi_dot_1 theta_dot_2 phi_dot_2]';
 q_ddot = [theta_ddot_1 phi_ddot_1 theta_ddot_2 phi_ddot_2]';
-jacobian(jacobian(L,q_dot),q_dot) <span class="ge">* q_ddot + jacobian(jacobian(L,q_dot),q) *</span> q_dot - jacobian(L,q)' == 0;
-</code></pre></div></div>
+jacobian(jacobian(L,q_dot),q_dot)*q_ddot+jacobian(jacobian(L,q_dot),q)*q_dot-jacobian(L,q)' == 0;
+</span></code></pre></div></div>
 
           </article>
 
