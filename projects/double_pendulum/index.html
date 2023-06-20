@@ -207,7 +207,7 @@
 <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>q = [theta_1 phi_1 theta_2 phi_2]';
 q_dot = [theta_dot_1 phi_dot_1 theta_dot_2 phi_dot_2]';
 q_ddot = [theta_ddot_1 phi_ddot_1 theta_ddot_2 phi_ddot_2]';
-EoM = jacobian(jacobian(L,q_dot),q_dot)<span class="ge">*q_ddot+jacobian(jacobian(L,q_dot),q)*</span>q_dot-jacobian(L,q)' == 0;
+EoM = jacobian(jacobian(L,q_dot),q_dot)<span class="se">\*</span>q_ddot+jacobian(jacobian(L,q_dot),q)<span class="se">\*</span>q_dot-jacobian(L,q)' == 0;
 </code></pre></div></div>
 
 <p>Then we can solve for \(\ddot{\theta_1}\), \(\ddot{\phi_1}\), \(\ddot{\theta_2}\), \(\ddot{\phi_2}\) using the <code class="language-plaintext highlighter-rouge">solve</code> function in MATLAB. Finally, we can store <code class="language-plaintext highlighter-rouge">q_dot</code> and <code class="language-plaintext highlighter-rouge">q_ddot</code> into a single vector and plug it into the <code class="language-plaintext highlighter-rouge">ode45</code> solver to solve for the motion of the double pendulum.</p>
