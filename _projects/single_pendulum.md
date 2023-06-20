@@ -280,7 +280,7 @@ $$
 
 where $$q_i$$ are the generalized coordinates of the system. For our system, we have two generalized coordinates $$q_1=\theta$$ and $$q_2=\phi$$. Plugging $$L$$ into the Euler-Lagrange equation will give us two equations (one containing $$\ddot{\theta}$$ and one containing $$\ddot{\phi}$$).
 
-Again, we can use MATLAB to do all of the heavy lifting for us. As we've done before, we can take the two equations and solve for $$\ddot{\theta}$$ and $$\ddot{\phi}$$ using the `solve` function. Then store $$\ddot{\theta}$$, $$\ddot{\phi}$$, $$\dot{\theta}$$, $$\dot{\phi}$$ into a vector, turn it into a MATLAB function and plug it into `ode45` to solve for the motion of the pendulum.
+Again, we can use MATLAB to do all of the heavy lifting for us. As we've done before, we can take the two equations and solve for $$\ddot{\theta}$$ and $$\ddot{\phi}$$ using the `solve` function. Then store $$\ddot{\theta}$$, $$\ddot{\phi}$$, $$\dot{\theta}$$, $$\dot{\phi}$$ into a vector, turn it into a MATLAB function using `matlabFunction` and plug it into `ode45` to solve for the motion of the pendulum.
 
 I was able to confirm that the equations of motion obtained using the Lagrange method matched the ones I obtained using the Newton-Euler method. As a result, the animation rendered using the Lagrange method was identical to the one rendered using the Newton-Euler method.
 
