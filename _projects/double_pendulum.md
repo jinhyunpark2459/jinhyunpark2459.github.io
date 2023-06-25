@@ -136,4 +136,4 @@ As a sanity check for the solutions, I plotted the energy versus time for the in
     </div>
 </div>
 
-The total mechanical energy of the system is indeed conserved.
+From the plot, we can see that the total mechanical energy of the system is conserved. For animating the solution, you can refer to my <a href="https://jinhyunpark2459.github.io/projects/single_pendulum/">previous post</a>.
