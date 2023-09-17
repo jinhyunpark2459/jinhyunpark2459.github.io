@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Dynamics Simulations
+title: Projects
 permalink: /projects/
 description: Dynamics simulations created using MATLAB.
 nav: true
