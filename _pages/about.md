@@ -17,8 +17,8 @@ social: true  # includes social icons at the bottom of the page
 ---
 I'm a senior [mechanical engineering](https://www.mae.cornell.edu/mae) student at [Cornell University](https://www.cornell.edu/). Currently, my passions are robotics and control engineering. This website is a platform to upload my personal projects. So far, this includes dynamics simulations coded using MATLAB and a series of lab write-ups for a robotics course I took at Cornell, where I built a robot car capable of mapping its surroundings and navigating autonomously within it.
 
-**Programming Languages**: Python, MATLAB, C++
+**Programming Languages**: MATLAB, C++, Python, Java
 <br>
-**Software**: SOLIDWORKS, Fusion 360, ANSYS Mechanical, SimuLink, ROS
+**Software**: SOLIDWORKS, SimuLink, Fusion 360, ROS ANSYS Mechanical
 
 Please feel free to contact me for any career opportunities and/or any other questions at [apark2459@gmail.com](mailto:apark2459@gmail.com)!
