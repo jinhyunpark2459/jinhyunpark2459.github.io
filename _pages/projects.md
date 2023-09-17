@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Dynamics simulations created using MATLAB.
+description: Various projects that I've worked on in the past couple of years.
 nav: true
 nav_order: 2
 display_categories:
