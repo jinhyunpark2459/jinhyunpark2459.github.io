@@ -121,7 +121,7 @@ Here are the resulting animations of the solution with various initial condition
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.html path="assets/video/double_pendulum_1.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.html path="assets/video/double_pendulum_1.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include video.html path="assets/video/double_pendulum_2.mp4" class="img-fluid rounded z-depth-1" controls=true %}
