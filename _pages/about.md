@@ -19,6 +19,6 @@ social: true  # includes social icons at the bottom of the page
 
 **Programming Languages**: MATLAB, C++, Python, Java
 <br><br>
-**Skills**: SOLIDWORKS, SimuLink, Fusion 360, Robot Operating System (ROS), ANSYS Mechanical
+**Skills**: Simulink, Robot Operating System (ROS), SOLIDWORKS, Fusion 360, ANSYS Mechanical
 
 Please feel free to contact me for any career opportunities and/or any other questions at [apark2459@gmail.com](mailto:apark2459@gmail.com)!
