@@ -63,5 +63,9 @@ Given the open-loop transfer function, we can now begin to design the controller
 1. The gain of the controller C(s) should be below 85 dB for all frequencies
 2. The gain of the controller C(s) at $$10^4$$ rad/s should be below 30 dB
 3. Phase margin $$\phi > 10^{\circ}$$
-4. Gain margin $$|GM| > 3 dB
-5. 
+4. Gain margin $$\vert GM \vert > 3 dB$$
+5. Disturbance rejection settling time $$T^{10%}_s < 2s$$
+6. $$\vert p \vert < 80$$ for all poles
+7. The controller must be proper.
+
+First thing we should do is look at the root locus of the open-loop transfer function to assess its stability:
