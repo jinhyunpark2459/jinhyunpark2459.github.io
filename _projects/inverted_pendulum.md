@@ -64,8 +64,36 @@ Given the open-loop transfer function, we can now begin to design the controller
 2. The gain of the controller C(s) at $$10^4$$ rad/s should be below 30 dB
 3. Phase margin $$\phi > 10^{\circ}$$
 4. Gain margin $$\vert GM \vert > 3 dB$$
-5. Disturbance rejection settling time $$T^{10%}_s < 2s$$
+5. Disturbance rejection settling time $$T^{10%}_{s} < 2s$$
 6. $$\vert p \vert < 80$$ for all poles
 7. The controller must be proper.
 
 First thing we should do is look at the root locus of the open-loop transfer function to assess its stability:
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/inverted_pendulum/OLrlocus.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+We can see from the root locus plot that the system has an open-loop pole in the RHP and is hence unstable. Then we should pull the root locus in the RHP into the LHP by placing zeros near the origin (because zeros “attract” poles). Let us place the two zeros at $$s=-1$$ and $$s=-1.5$$. To make the controller proper while not messing up the root locus around the two zeros we just placed, we will add two poles at $$s=-80$$ far away from the rest of the pole/zeros. Then by adjusting the gain to -5, we are able to stabilize the system:
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/inverted_pendulum/stable_rlocus.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/inverted_pendulum/stable_bode.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+Noticed that the magnitude plot near the cross-over frequency is very flat. This makes it difficult to control the crossover frequency by adjusting the gain. Ideally, we want the magnitude graph to decrease steadily near the crossover frequency. So, we should move the poles at 80 rad/s down closer to the crossover frequency to 30 rad/s to decrease the slope near the crossover frequency (~5 rad/s).
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/inverted_pendulum/2.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
