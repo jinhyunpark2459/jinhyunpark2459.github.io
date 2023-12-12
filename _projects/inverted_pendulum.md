@@ -98,7 +98,7 @@ Notice that the magnitude plot near the cross-over frequency is very flat. This 
     </div>
 </div>
 
-It's still quite flat near the crossover frequency but we will come back to this later. At this point, the phase margin is 8.7 degrees which is too small. So, we can add another zero near the crossover frequency and add another pole at %%s=-80%% to make it proper while not affecting the region near the crossover frequency. We will choose to add a zero at $$s=-5$$:
+It's still quite flat near the crossover frequency but we will come back to this later. At this point, the phase margin is 8.7 degrees which is too small. So, we can add another zero near the crossover frequency and add another pole at $$s=-80$$ to make it proper while not affecting the region near the crossover frequency. We will choose to add a zero at $$s=-5$$:
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
