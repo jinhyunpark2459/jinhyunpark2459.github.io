@@ -40,6 +40,7 @@ $$
 f_{c}=\alpha_{1}V+\alpha_{2}\dot{x}_{c}
 $$
 
+
 where $$\alpha_{1}$$ and $$\alpha_{2}$$ are system parameters that were empirically determined and $$\dot{x}_{c}$$ is the velocity of the cart (so the second term is a drag term).
 
 The output of the system (i.e. the quantity we measure) is the following:
