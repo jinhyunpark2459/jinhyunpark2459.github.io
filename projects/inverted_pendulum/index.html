@@ -118,7 +118,7 @@
             <h3 id="problem-setup">Problem Setup</h3>
 <p>In this post, I am going to walk through how I approached the design of a controller for an inverted pendulum in the frequency domain. First, let’s start by exploring the open-loop dynamics of the inverted pendulum. The linearized  equations of motion of the inverted pendulum about the upright position are given below:</p>
 
-<p>\(\begin{bmatrix}
+\[\begin{bmatrix}
 M_{c}+M_{R}+I_{mot}\frac{k^2}{R^2} &amp; -\frac{1}{2}M_{R}L \\
 -1 &amp; \frac{2}{3}L \\
 \end{bmatrix}
@@ -137,8 +137,9 @@ g
 1 \\
 0
 \end{bmatrix}
-f_{c}\)
-where \(x_{c}\) is the position of the cart, \(\theta\) is the angle the pendulum makes with the vertical axis, \(M_{c}\) is the mass of the cart, \(M_{R}\) is the mass of the pendulum rod, \(L\) is the length of the pendulum rod, and \(I_{rot}\) is the motor’s moment of inertia.</p>
+f_{c}\]
+
+<p>where \(x_{c}\) is the position of the cart, \(\theta\) is the angle the pendulum makes with the vertical axis, \(M_{c}\) is the mass of the cart, \(M_{R}\) is the mass of the pendulum rod, \(L\) is the length of the pendulum rod, and \(I_{rot}\) is the motor’s moment of inertia.</p>
 
 <p>The input into the system is \(f_{c}\), the force on the cart. But we don’t directly control \(f_{c}\). The actual control input that we get to choose is the voltage supplied to the cart’s motors, \(V\). \(f_{c}\) is given by the following equation:</p>
 
@@ -158,6 +159,24 @@ where \(x_{c}\) is the position of the cart, \(\theta\) is the angle the pendulu
 
 <h3 id="controller-design">Controller Design</h3>
 <p>Given the open-loop transfer function, we can now begin to design the controller. Before getting started, the following is a list of performance requirements that the controller must satisfy:</p>
+
+<ol>
+  <li>The gain of the controller C(s) should be below 85 dB for all frequencies</li>
+  <li>The gain of the controller C(s) at \(10^4\) rad/s should be below 30 dB</li>
+  <li>Phase margin \(\phi &gt; 10^{\circ}\)</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Gain margin $$</td>
+          <td>GM</td>
+          <td>&gt; 3 dB</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+</ol>
 
           </article>
 
