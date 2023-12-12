@@ -168,7 +168,7 @@ Following is a video of this controller successfully stabilizing the inverted pe
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.html path="assets/video/inverted_pendulum.mov" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
+        {% include video.html path="assets/video/inverted_pendulum.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
     </div>
 
 In the next post, I will walk through how I designed a controller using state-space methods to stabilized the same system.
