@@ -122,17 +122,32 @@
 M_{c}+M_{R}+I_{mot}\frac{k^2}{R^2} &amp; -\frac{1}{2}M_{R}L \\
 -1 &amp; frac{2}{3}L \\
 \end{bmatrix}
-\begin{bmatrix}\]
+\begin{bmatrix}
+\ddot{x}_{c} \\
+\ddot{\theta}
+\end{bmatrix}
+-
+\begin{bmatrix}
+0 \\
+g
+\end{bmatrix}
+\theta
+=
+\begin{bmatrix}
+1 \\
+0
+\end{bmatrix}
+f_{c}\]
 
 <p>The input into the system is \(f_{c}\) – the force on the cart. But we don’t directly control \(f_{c}\). The actual control input that we get to choose is the voltage supplied to the cart’s motors, \(V\). \(f_{c}\) is given by the following equation:</p>
 
-\[f_{c}=\alpha_{1}V+\alpha_{2}x_dot_{c}\]
+\[f_{c}=\alpha_{1}V+\alpha_{2}\dot{x}_{c}\]
 
-<p>where \(\alpha_{1}\) and \(\alpha_{2}\) are system parameters that were empirically determined and \(x_dot_{c}\) is the velocity of the cart (so the second term is a drag term).</p>
+<p>where \(\alpha_{1}\) and \(\alpha_{2}\) are system parameters that were empirically determined and \(\dot{x}_{c}\) is the velocity of the cart (so the second term is a drag term).</p>
 
 <p>The output of the system (i.e. the quantity we measure) is the following:</p>
 
-\[x=x_c-\frac{2}{3}Lsin(\theta)\]
+\[x=x_{c}-\frac{2}{3}Lsin(\theta)\]
 
 <table>
   <tbody>
