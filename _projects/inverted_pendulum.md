@@ -64,7 +64,7 @@ Given the open-loop transfer function, we can now begin to design the controller
 2. The gain of the controller C(s) at $$10^4$$ rad/s should be below 30 dB
 3. Phase margin $$\phi > 10^{\circ}$$
 4. Gain margin $$\vert GM \vert > 3 dB$$
-5. Disturbance rejection settling time $$T^{10%}_{s} < 2s$$
+5. Disturbance rejection settling time $$T^{10\%}_{s} < 2s$$
 6. $$\vert p \vert < 80$$ for all poles
 7. The controller must be proper.
 
@@ -72,7 +72,7 @@ First thing we should do is look at the root locus of the open-loop transfer fun
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/inverted_pendulum/OLrlocus.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/inverted_pendulum/OLrlocus.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -80,13 +80,13 @@ We can see from the root locus plot that the system has an open-loop pole in the
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/inverted_pendulum/stable_rlocus.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/inverted_pendulum/stable_rlocus.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/inverted_pendulum/stable_bode.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/inverted_pendulum/stable_bode.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -94,6 +94,6 @@ Noticed that the magnitude plot near the cross-over frequency is very flat. This
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/inverted_pendulum/2.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/inverted_pendulum/2.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
