@@ -32,6 +32,7 @@ g
 \end{bmatrix}
 f_{c}
 $$
+
 where $$x_{c}$$ is the position of the cart, $$\theta$$ is the angle the pendulum makes with the vertical axis, $$M_{c}$$ is the mass of the cart, $$M_{R}$$ is the mass of the pendulum rod, $$L$$ is the length of the pendulum rod, and $$I_{rot}$$ is the motor's moment of inertia.
 
 The input into the system is $$f_{c}$$, the force on the cart. But we don’t directly control $$f_{c}$$. The actual control input that we get to choose is the voltage supplied to the cart’s motors, $$V$$. $$f_{c}$$ is given by the following equation:
@@ -39,7 +40,6 @@ The input into the system is $$f_{c}$$, the force on the cart. But we don’t di
 $$
 f_{c}=\alpha_{1}V+\alpha_{2}\dot{x}_{c}
 $$
-
 
 where $$\alpha_{1}$$ and $$\alpha_{2}$$ are system parameters that were empirically determined and $$\dot{x}_{c}$$ is the velocity of the cart (so the second term is a drag term).
 
@@ -59,3 +59,9 @@ $$
 
 ### Controller Design
 Given the open-loop transfer function, we can now begin to design the controller. Before getting started, the following is a list of performance requirements that the controller must satisfy:
+
+1. The gain of the controller C(s) should be below 85 dB for all frequencies
+2. The gain of the controller C(s) at $$10^4$$ rad/s should be below 30 dB
+3. Phase margin $$\phi > 10^{\circ}$$
+4. Gain margin $$|GM| > 3 dB
+5. 
