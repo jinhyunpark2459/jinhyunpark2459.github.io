@@ -140,6 +140,8 @@ At this point, most requirements are satisfied but the controller $$C(s)$$ does 
     </div>
 </div>
 
+The closed-loop system has a gain margin of 3.47 dB and a phase margin of 11.1 degrees.
+
 Here is the resulting step response to a disturbance, showing a settling time less than 2 seconds:
 
 <div class="row justify-content-sm-center">
@@ -156,7 +158,7 @@ The controller C(s) also satisfies the gain requirements:
     </div>
 </div>
 
-The overall controller is given below:
+The controller $$C(s)$$ is given below:
 
 $$
 C(s)=-5.4\frac{(1+2s)(1+0.2s)^2}{(1+0.017s)^2(1+0.033s)^2(1+0.013s)}
@@ -169,4 +171,4 @@ Following is a video of this controller successfully stabilizing the inverted pe
         {% include video.html path="assets/video/inverted_pendulum.mov" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
     </div>
 
-In the next post, I will walk through how I designed a controller in state-space to stabilized the same system.
+In the next post, I will walk through how I designed a controller using state-space methods to stabilized the same system.
