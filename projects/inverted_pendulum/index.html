@@ -165,12 +165,100 @@ f_{c}\]
   <li>The gain of the controller C(s) at \(10^4\) rad/s should be below 30 dB</li>
   <li>Phase margin \(\phi &gt; 10^{\circ}\)</li>
   <li>Gain margin \(\vert GM \vert &gt; 3 dB\)</li>
-  <li>Disturbance rejection settling time \(T^{10%}_s &lt; 2s\)</li>
+  <li>Disturbance rejection settling time \(T^{10%}_{s} &lt; 2s\)</li>
   <li>\(\vert p \vert &lt; 80\) for all poles</li>
   <li>The controller must be proper.</li>
 </ol>
 
 <p>First thing we should do is look at the root locus of the open-loop transfer function to assess its stability:</p>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/inverted_pendulum/OLrlocus-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/inverted_pendulum/OLrlocus-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/inverted_pendulum/OLrlocus-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/inverted_pendulum/OLrlocus.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>We can see from the root locus plot that the system has an open-loop pole in the RHP and is hence unstable. Then we should pull the root locus in the RHP into the LHP by placing zeros near the origin (because zeros “attract” poles). Let us place the two zeros at \(s=-1\) and \(s=-1.5\). To make the controller proper while not messing up the root locus around the two zeros we just placed, we will add two poles at \(s=-80\) far away from the rest of the pole/zeros. Then by adjusting the gain to -5, we are able to stabilize the system:</p>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/inverted_pendulum/stable_rlocus-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/inverted_pendulum/stable_rlocus-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/inverted_pendulum/stable_rlocus-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/inverted_pendulum/stable_rlocus.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/inverted_pendulum/stable_bode-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/inverted_pendulum/stable_bode-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/inverted_pendulum/stable_bode-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/inverted_pendulum/stable_bode.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Noticed that the magnitude plot near the cross-over frequency is very flat. This makes it difficult to control the crossover frequency by adjusting the gain. Ideally, we want the magnitude graph to decrease steadily near the crossover frequency. So, we should move the poles at 80 rad/s down closer to the crossover frequency to 30 rad/s to decrease the slope near the crossover frequency (~5 rad/s).</p>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/inverted_pendulum/2-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/inverted_pendulum/2-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/inverted_pendulum/2-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/inverted_pendulum/2.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
 
           </article>
 
