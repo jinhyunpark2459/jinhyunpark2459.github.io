@@ -55,7 +55,7 @@ $$
 \begin{bmatrix}
 0 & 0 & 1 & 0 \\
 0 & 0 & 0 & 1 \\
-\begin{bmatrix} 0 \\ 0 \end{bmatrix} & \begin{bmatrix} 0 \\ 0 \end{bmatrix} & \begin{bmatrix} 0 \\ 0 \end{bmatrix} & \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+\begin{bmatrix} 0 \\ 0 \end{bmatrix} & H^{-1}\begin{bmatrix} 0 \\ g \end{bmatrix} & H^{-1}\begin{bmatrix} \alpha_{2} \\ 0 \end{bmatrix} & \begin{bmatrix} 0 \\ 0 \end{bmatrix}
 \end{bmatrix}
 
 $$
