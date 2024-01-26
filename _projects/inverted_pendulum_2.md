@@ -44,8 +44,21 @@ M_{c}+M_{R}+I_{mot}\frac{k^2}{R^2} & -\frac{1}{2}M_{R}L \\
 \end{bmatrix}
 $$
 
+Then we can rewrite the linearized equations of motion as the following:
 
+$$
+\begin{bmatrix}
+\ddot{x}_{c} \\
+\ddot{\theta}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+\begin{bmatrix} 0 \\ 0 \end{bmatrix} & \begin{bmatrix} 0 \\ 0 \end{bmatrix} & \begin{bmatrix} 0 \\ 0 \end{bmatrix} & \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+\end{bmatrix}
 
+$$
 
 
 
