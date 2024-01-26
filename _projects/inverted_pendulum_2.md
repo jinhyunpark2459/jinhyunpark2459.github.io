@@ -38,7 +38,7 @@ where $$x_{c}$$ is the position of the cart, $$\theta$$ is the angle the pendulu
 For ease of notation, let us define the following:
 
 $$
-H=\begin{bmatrix}
+H\triangleq\begin{bmatrix}
 M_{c}+M_{R}+I_{mot}\frac{k^2}{R^2} & -\frac{1}{2}M_{R}L \\
 -1 & \frac{2}{3}L \\
 \end{bmatrix}
