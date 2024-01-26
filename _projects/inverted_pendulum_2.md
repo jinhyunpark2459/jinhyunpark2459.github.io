@@ -68,13 +68,38 @@ x_{c} \\
 +H^{-1}\begin{bmatrix} \alpha_{1} \\ 0 \end{bmatrix}u
 $$
 
-We will design two controllers: (1) a SISO (single-input single-output) controller and (2) a SIMO (single-input multiple-output) controller. For controller (1), we have a scalar output $$y=x_{c}-\frac{2}{3}L\theta$$ that lumps together the two measurements $$x_{c}$$ and $$\theta$$. Note that this output is basically the x position of the 1/3 point of the rod from the base.
+This tells us the A and B matrices:
 
+$$A=
+\begin{bmatrix}
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+\begin{bmatrix} 0 \\ 0 \end{bmatrix} & H^{-1}\begin{bmatrix} 0 \\ g \end{bmatrix} & H^{-1}\begin{bmatrix} \alpha_{2} \\ 0 \end{bmatrix} & \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+\end{bmatrix}
+$$
 
+$$B=
+H^{-1}\begin{bmatrix} \alpha_{1} \\ 0 \end{bmatrix}
+$$
 
-For controller (2), the output is a 2 by 1 vector, $$\begin{bmatrix} x_{c}$$ \\ \theta \end{bmatrix}$$.
+We will design two controllers: (1) a SISO (single-input single-output) controller and (2) a SIMO (single-input multiple-output) controller. For controller (1), we have a scalar output $$y=x_{c}-\frac{2}{3}L\theta$$ that lumps together the two measurements $$x_{c}$$ and $$\theta$$. Note that this output is basically the x position of the 1/3 point of the rod from the base. For controller (2), the output is a 2 by 1 vector, $$\begin{bmatrix} x_{c} \\ \theta \end{bmatrix}$$. Consequently, the two controllers will have difference C matrices. For controller (1),
 
+$$
+C_{SISO}=
+\begin{bmatrix}
+1 & -\frac{2}{3}L & 0 & 0
+\end{bmatrix}
+$$
 
+For controller (2),
+
+$$
+C_{SIMO}=
+\begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0
+\end{bmatrix}
+$$
 
 
 
