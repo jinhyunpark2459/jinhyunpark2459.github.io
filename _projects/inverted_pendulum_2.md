@@ -49,7 +49,9 @@ Then we can rewrite the linearized equations of motion as the following:
 $$
 \begin{bmatrix}
 \ddot{x}_{c} \\
-\ddot{\theta}
+\ddot{\theta} \\
+\dot{x}_{c} \\
+\dot{\theta}
 \end{bmatrix}
 =
 \begin{bmatrix}
@@ -57,7 +59,13 @@ $$
 0 & 0 & 0 & 1 \\
 \begin{bmatrix} 0 \\ 0 \end{bmatrix} & H^{-1}\begin{bmatrix} 0 \\ g \end{bmatrix} & H^{-1}\begin{bmatrix} \alpha_{2} \\ 0 \end{bmatrix} & \begin{bmatrix} 0 \\ 0 \end{bmatrix}
 \end{bmatrix}
-
+\begin{bmatrix}
+\dot{x}_{c} \\
+\dot{\theta} \\
+x_{c} \\
+\theta
+\end{bmatrix}
++H^{-1}\begin{bmatrix} \alpha_{1} \\ 0 \end{bmatrix}u
 $$
 
 
