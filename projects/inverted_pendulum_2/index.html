@@ -245,12 +245,28 @@ H^{-1}\begin{bmatrix} \alpha_{1} \\ 0 \end{bmatrix}\]
     </div>
 </div>
 
-<p>This lets us write the following four equations:</p>
+<p>This block diagram lets us write the following four equations:</p>
 
-<p>\(\dot{x}=Ax+Bu (1)\)
-\(y=Cx (2)\)
-\(\hat{\dot{x}}=(A-BK-LC)\hat{x}+Ly (3)\)
-\(u=-K\hat{x} (4)\)</p>
+\[\dot{x}=Ax+Bu (1)\]
+
+\[y=Cx (2)\]
+
+\[\hat{\dot{x}}=(A-BK-LC)\hat{x}+Ly (3)\]
+
+\[u=-K\hat{x} (4)\]
+
+<p>Substituting equation (4) into (1) and substituting equation (2) into (3) gives us:</p>
+
+<p>\(\dot{x}=Ax-BK\hat{x}\)
+\(\dot{\hat{x}=(A-BK-LC)\hat{x}+LCx\)</p>
+
+<p>Furthermore, let us define the error \(e\) as \(e=x-\hat{x}\) and define a new state vector \(q\):</p>
+
+\[q=
+\begin{bmatrix}
+x \\
+e
+\end{bmatrix}\]
 
           </article>
 
