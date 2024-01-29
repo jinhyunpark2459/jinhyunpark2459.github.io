@@ -158,3 +158,15 @@ e
 $$
 
 This gives us a new state-space representation:
+
+$$
+\dot{q}=
+\begin{bmatrix}
+A-BK & BK \\
+0 & A-LC
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+e
+\end{bmatrix}
+$$
