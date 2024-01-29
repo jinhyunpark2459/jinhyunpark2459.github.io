@@ -68,7 +68,7 @@ x_{c} \\
 +H^{-1}\begin{bmatrix} \alpha_{1} \\ 0 \end{bmatrix}u
 $$
 
-This tells us the A and B matrices:
+This tells us the $$A$$ and $$B$$ matrices:
 
 $$A=
 \begin{bmatrix}
@@ -170,3 +170,5 @@ x \\
 e
 \end{bmatrix}
 $$
+
+The eigenvalues of the new $$A$$ matrix is the union of the eigenvalues of $$A-BK$$ and the eigenvalues of $$A-LC$$. To drive the state $$x$$ to zero, we must choose $$K$$ such that the eigenvalues of $$A-BK$$ are in the LHP and to drive the error $$e$$ to zero, we must choose $$L$$ such that the eigenvalues of $$A-LC$$ are in the LHP. The fact that we can design $$K$$ and $$L$$ separately (i.e. design $$K$$ as if full-state feedback is available) is referred to as the separation principle.
