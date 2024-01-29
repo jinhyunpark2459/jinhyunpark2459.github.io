@@ -119,17 +119,24 @@ Or equivalently,
     </div>
 </div>
 
-This lets us write the following four equations:
+This block diagram lets us write the following four equations:
 
 $$
 \dot{x}=Ax+Bu (1)
 $$
+
 $$
 y=Cx (2)
 $$
+
 $$
 \hat{\dot{x}}=(A-BK-LC)\hat{x}+Ly (3)
 $$
+
 $$
 u=-K\hat{x} (4)
 $$
+
+
+
+Furthermore, let us define the error $$e$$ as $$e=x-\hat{x}$$ and
