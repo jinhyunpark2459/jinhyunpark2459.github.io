@@ -122,22 +122,22 @@ Or equivalently,
 This block diagram lets us write the following four equations:
 
 $$
-\dot{x}=Ax+Bu (1)
+\dot{x}=Ax+Bu
 $$
 
 $$
-y=Cx (2)
+y=Cx
 $$
 
 $$
-\hat{\dot{x}}=(A-BK-LC)\hat{x}+Ly (3)
+\hat{\dot{x}}=(A-BK-LC)\hat{x}+Ly
 $$
 
 $$
-u=-K\hat{x} (4)
+u=-K\hat{x}
 $$
 
-Substituting equation (4) into (1) and substituting equation (2) into (3) gives us:
+Substituting the fourth equation into the first equation and substituting the second equation into the third equation gives us:
 
 $$\dot{x}=Ax-BK\hat{x}$$
 $$\dot{\hat{x}=(A-BK-LC)\hat{x}+LCx$$
@@ -151,3 +151,5 @@ x \\
 e
 \end{bmatrix}
 $$
+
+This gives us a new state-space representation
