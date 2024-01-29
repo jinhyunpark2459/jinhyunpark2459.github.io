@@ -139,8 +139,13 @@ $$
 
 Substituting the fourth equation into the first equation and substituting the second equation into the third equation gives us:
 
-$$\dot{x}=Ax-BK\hat{x}$$
-$$\dot{\hat{x}}=(A-BK-LC)\hat{x}+LCx$$
+$$
+\dot{x}=Ax-BK\hat{x}
+$$
+
+$$
+\dot{\hat{x}}=(A-BK-LC)\hat{x}+LCx
+$$
 
 Furthermore, let us define the error $$e$$ as $$e=x-\hat{x}$$ and define a new state vector $$q$$:
 
@@ -152,4 +157,4 @@ e
 \end{bmatrix}
 $$
 
-This gives us a new state-space representation
+This gives us a new state-space representation:
