@@ -197,7 +197,7 @@ H^{-1}\begin{bmatrix} \alpha_{1} \\ 0 \end{bmatrix}\]
 0 &amp; 1 &amp; 0 &amp; 0
 \end{bmatrix}\]
 
-<h2 id="review-of-theory">Review of Theory</h2>
+<h2 id="controller-design">Controller Design</h2>
 
 <p>In both cases (SISO and SIMO system), we do not have access to the full state. That is, we need to implement an observer (i.e. state estimator) to estimate the state based on our measurements \(y\). The block diagram that implements this looks like the following:</p>
 
@@ -247,12 +247,10 @@ H^{-1}\begin{bmatrix} \alpha_{1} \\ 0 \end{bmatrix}\]
 
 <p>This lets us write the following four equations:</p>
 
-\[\dot{x}=Ax+Bu (1)
-y=Cx (2)
-\hat{\dot{x}}=(A-BK-LC)\hat{x}+Ly (3)
-u=-K\hat{x} (4)\]
-
-<h3 id="controller-design">Controller Design</h3>
+<p>\(\dot{x}=Ax+Bu (1)\)
+\(y=Cx (2)\)
+\(\hat{\dot{x}}=(A-BK-LC)\hat{x}+Ly (3)\)
+\(u=-K\hat{x} (4)\)</p>
 
           </article>
 
