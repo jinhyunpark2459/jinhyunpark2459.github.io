@@ -137,6 +137,17 @@ $$
 u=-K\hat{x} (4)
 $$
 
+Substituting equation (4) into (1) and substituting equation (2) into (3) gives us:
 
+$$\dot{x}=Ax-BK\hat{x}$$
+$$\dot{\hat{x}=(A-BK-LC)\hat{x}+LCx$$
 
-Furthermore, let us define the error $$e$$ as $$e=x-\hat{x}$$ and
+Furthermore, let us define the error $$e$$ as $$e=x-\hat{x}$$ and define a new state vector $$q$$:
+
+$$
+q=
+\begin{bmatrix}
+x \\
+e
+\end{bmatrix}
+$$
