@@ -103,7 +103,7 @@ $$
 
 ## Review of Theory
 
-In both cases of the SISO system and the SIMO system, we do not have access to the full state. That is, we need to implement an observer (i.e. state estimator). The block diagram that implements this looks like the following:
+In both cases (SISO and SIMO system), we do not have access to the full state. That is, we need to implement an observer (i.e. state estimator) to estimate the state based on our measurements $$y$$. The block diagram that implements this looks like the following:
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -119,7 +119,14 @@ Or equivalently,
     </div>
 </div>
 
-the block diagram looks like the following:
+This lets us write the following four equations:
+
+$$
+\dot{x}=Ax+Bu (1)
+y=Cx (2)
+\hat{\dot{x}}=(A-BK-LC)\hat{x}+Ly (3)
+u=-K\hat{x} (4)
+$$
 
 
 ### Controller Design
