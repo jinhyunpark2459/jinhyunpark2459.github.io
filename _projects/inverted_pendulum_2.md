@@ -101,5 +101,25 @@ C_{SIMO}=
 \end{bmatrix}
 $$
 
+## Review of Theory
+
+In both cases of the SISO system and the SIMO system, we do not have access to the full state. That is, we need to implement an observer (i.e. state estimator). The block diagram that implements this looks like the following:
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/inverted_pendulum/blockdiagram1.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+Or equivalently,
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/inverted_pendulum/blockdiagram2.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+the block diagram looks like the following:
+
 
 ### Controller Design
