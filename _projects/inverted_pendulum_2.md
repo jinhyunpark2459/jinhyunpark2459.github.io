@@ -183,3 +183,21 @@ controller
 5. $$\vert lambda \vert p<80$$ for all eigenvalues
 
 Determining where exactly where should place the eigenvalues was largely by trial-and-error. While placing the eigenvalues farther into the LHP leads to faster convergence for both the state and the error, this can be problematic as it will request too large of a control input from the actuator (i.e. motor). This is in fact what I observed in practice. Initially, for both the SISO and SIMO controllers, I chose all four eigenvalues of $$A-BK$$ to have real parts less than (i.e. more negative than) -20. Even though simulating the system with these eigenvalues satisfied the disturbance rejection settling time, because the real part of the eigenvalues quite large, this led to a lot of side-to-side jittery motion in the cart which made it hard to balance the pendulum. I noticed this and incrementally made the magnitude of the eigenvalues smaller, eventually obtaining a stable closed-loop system with eigenvalues $$\lambda_{1,2}=-7\pm0.5i$$,  $$\lambda_{3}=-6$$, $$\lambda_{4}=-5.9$$ for the SISO controller and $$\lambda_{1}=-10$$, $$\lambda_{2}=-9.5$$, $$\lambda_{3}=-10.5$$, $$\lambda_{4}=-11$$ for the SIMO controller.
+
+The following is a video that shows the SISO controller successfully stabilizing the system:
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.html path="assets/video/siso.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
+    </div>
+</div>
+
+The following is a video that shows the SIMO controller successfully stabilizing the system:
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.html path="assets/video/simo.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=false %}
+    </div>
+</div>
+
+## Comparison between the SISO and SIMO Controllers
