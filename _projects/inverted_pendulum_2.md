@@ -171,4 +171,15 @@ e
 \end{bmatrix}
 $$
 
-The eigenvalues of the new $$A$$ matrix is the union of the eigenvalues of $$A-BK$$ and the eigenvalues of $$A-LC$$. To drive the state $$x$$ to zero, we must choose $$K$$ such that the eigenvalues of $$A-BK$$ are in the LHP and to drive the error $$e$$ to zero, we must choose $$L$$ such that the eigenvalues of $$A-LC$$ are in the LHP. The fact that we can design $$K$$ and $$L$$ separately (i.e. design $$K$$ as if full-state feedback is available) is referred to as the separation principle.
+The eigenvalues of the new $$A$$ matrix is the union of the eigenvalues of $$A-BK$$ and the eigenvalues of $$A-LC$$. To drive the state $$x$$ to zero (or more precisely, the zero vector), we must choose $$K$$ such that the eigenvalues of $$A-BK$$ are in the LHP and to drive the error $$e$$ to zero, we must choose $$L$$ such that the eigenvalues of $$A-LC$$ are in the LHP. The fact that we can design $$K$$ and $$L$$ separately (i.e. design $$K$$ as if full-state is available for feedback) is referred to as the separation principle.
+
+The only thing left to do now is to choose where to place the eigenvalues of $$A-BK$$ and $$A-LC$$. As a guideline for choosing $$K$$ and $$L$$, we were given the following requirements:
+
+1. The closed-loop control system is stable
+2. Disturbance rejection settling time $$T^{10\%}_{s} < 2s$$
+3. The damping ratio $$\zeta$$ is at least $$1/sqrt{2}$$ in order to avoid oscillatory behavior
+4. The eigenvalues of your observer should be around 3 times the real part of the eigenvalues of your
+controller
+5. $$|\lambda|<80$$ for all eigenvalues
+
+Determining where exactly where should place the eigenvalues was largely by trial-and-error. While placing the eigenvalues farther into the LHP leads to faster convergence for both the state and the error, this can be problematic as it will request too large of a control input from the actuator (i.e. motor). This is in fact what I observed in practice. Initially, for both the SISO and SIMO controllers, I chose all four eigenvalues of $$A-BK$$ to have real parts less than (i.e. more negative than) -20. Even though simulating the system with these eigenvalues satisfied the disturbance rejection settling time, because the real part of the eigenvalues quite large, this led to a lot of side-to-side jittery motion in the cart which made it hard to balance the pendulum. I noticed this and incrementally made the magnitude of the eigenvalues smaller, eventually obtaining a stable closed-loop system with eigenvalues $$\lambda_{1,2}=-7\pm0.5i$$,  $$\lambda_{3}=-6$$, $$\lambda_{4}=-5.9$$ for the SISO controller and $$\lambda_{1}=-10$$, $$\lambda_{2}=-9.5$$, $$\lambda_{3}=-10.5$$, $$\lambda_{4}=-11$$ for the SIMO controller. 
