@@ -210,6 +210,8 @@ Note: the y-axis is the output, which in the case of the SISO system, is $$y=x_{
 <p style="text-align: center;">Simulation of SIMO system in response to nonzero initial angle</p>
 Note: the SIMO system has 2 outputs ($$x_{c}$$ and $$\theta$$); the top graph corresponds to response of $$x_{c}$$ and the bottom graph corresponds to response of $$\theta$$.
 
+You can see that in both cases, the settling time is less than 2 seconds.
+
 The following is a video that shows the SISO controller successfully stabilizing the system:
 
 <div class="row mt-3">
