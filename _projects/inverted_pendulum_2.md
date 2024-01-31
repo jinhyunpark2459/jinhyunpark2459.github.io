@@ -60,10 +60,10 @@ $$
 \begin{bmatrix} 0 \\ 0 \end{bmatrix} & H^{-1}\begin{bmatrix} 0 \\ g \end{bmatrix} & H^{-1}\begin{bmatrix} \alpha_{2} \\ 0 \end{bmatrix} & \begin{bmatrix} 0 \\ 0 \end{bmatrix}
 \end{bmatrix}
 \begin{bmatrix}
-\dot{x}_{c} \\
-\dot{\theta} \\
-x_{c} \\
-\theta
+{x}_{c} \\
+\theta \\
+\dot{x_{c}} \\
+\dot{\theta}
 \end{bmatrix}
 +H^{-1}\begin{bmatrix} \alpha_{1} \\ 0 \end{bmatrix}u
 $$
@@ -161,6 +161,9 @@ This gives us a new state-space representation:
 
 $$
 \dot{q}=
+\dot{x} \\
+\dot{e}
+\end{bmatrix}=
 \begin{bmatrix}
 A-BK & BK \\
 0 & A-LC
