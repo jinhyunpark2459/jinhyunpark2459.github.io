@@ -161,6 +161,7 @@ This gives us a new state-space representation:
 
 $$
 \dot{q}=
+\begin{bmatrix}
 \dot{x} \\
 \dot{e}
 \end{bmatrix}=
