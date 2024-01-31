@@ -163,10 +163,10 @@ M_{c}+M_{R}+I_{mot}\frac{k^2}{R^2} &amp; -\frac{1}{2}M_{R}L \\
 \begin{bmatrix} 0 \\ 0 \end{bmatrix} &amp; H^{-1}\begin{bmatrix} 0 \\ g \end{bmatrix} &amp; H^{-1}\begin{bmatrix} \alpha_{2} \\ 0 \end{bmatrix} &amp; \begin{bmatrix} 0 \\ 0 \end{bmatrix}
 \end{bmatrix}
 \begin{bmatrix}
-\dot{x}_{c} \\
-\dot{\theta} \\
-x_{c} \\
-\theta
+{x}_{c} \\
+\theta \\
+\dot{x_{c}} \\
+\dot{\theta}
 \end{bmatrix}
 +H^{-1}\begin{bmatrix} \alpha_{1} \\ 0 \end{bmatrix}u\]
 
@@ -272,6 +272,9 @@ e
 <p>This gives us a new state-space representation:</p>
 
 \[\dot{q}=
+\dot{x} \\
+\dot{e}
+\end{bmatrix}=
 \begin{bmatrix}
 A-BK &amp; BK \\
 0 &amp; A-LC
