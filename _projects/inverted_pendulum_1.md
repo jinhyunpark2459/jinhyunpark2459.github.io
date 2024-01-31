@@ -10,6 +10,12 @@ category: work
 ### Problem Setup
 In this post, I am going to walk through how I approached the design of a controller for an inverted pendulum in the frequency domain. First, let’s start by exploring the open-loop dynamics of the inverted pendulum. The linearized  equations of motion of the inverted pendulum about the upright position are given below:
 
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/inverted_pendulum/setup.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 $$
 \begin{bmatrix}
 M_{c}+M_{R}+I_{mot}\frac{k^2}{R^2} & -\frac{1}{2}M_{R}L \\

@@ -10,6 +10,12 @@ category: work
 ### Problem Setup
 In the previous post, I gave a walk-through how we could design a controller for the inverted pendulum using frequency domain techniques. In this post, we will the design of a controller for the same system using state-space methods. Recall the linearized  equations of motion of the inverted pendulum about the upright position:
 
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/inverted_pendulum/setup.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 $$
 \begin{bmatrix}
 M_{c}+M_{R}+I_{mot}\frac{k^2}{R^2} & -\frac{1}{2}M_{R}L \\
