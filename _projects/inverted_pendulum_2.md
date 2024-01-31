@@ -39,7 +39,7 @@ g
 f_{c}
 $$
 
-where $$x_{c}$$ is the position of the cart, $$\theta$$ is the angle the pendulum makes with the vertical axis, $$M_{c}$$ is the mass of the cart, $$M_{R}$$ is the mass of the pendulum rod, $$L$$ is the length of the pendulum rod, and $$I_{rot}$$ is the motor's moment of inertia. The input into the system is $$f_{c}=\alpha_{1}V+\alpha_{2}\dot{x}_{c}$$, where we get to control the voltage supplied to the cart’s motors, $$V$$.
+where $$x_{c}$$ is the position of the cart, $$\theta$$ is the angle the pendulum makes with the vertical axis, $$M_{c}$$ is the mass of the cart, $$M_{R}$$ is the mass of the pendulum rod, $$L$$ is the length of the pendulum rod, and $$I_{rot}$$ is the motor's moment of inertia. The input into the system is $$f_{c}=\alpha_{1}V+\alpha_{2}\dot{x}_{c}$$, where we get to control the voltage supplied to the cart’s motor, $$V$$.
 
 For ease of notation, let us define the following:
 
