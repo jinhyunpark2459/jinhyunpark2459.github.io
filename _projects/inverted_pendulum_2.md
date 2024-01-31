@@ -201,3 +201,23 @@ The following is a video that shows the SIMO controller successfully stabilizing
 </div>
 
 ## Comparison between the SISO and SIMO Controllers
+
+Next, let us compare the performance of the two controllers. The following are the cart position and pendulum angle versus time plots for the SISO controller with roughly zero angle initial conditions:
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/inverted_pendulum/plot1.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+The following are the cart position and pendulum angle versus time plots for the SIMO controller with roughly zero angle initial conditions:
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/inverted_pendulum/plot2.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+Any spikes in the plots correspond to when we tried to disturb the system by giving the pendulum a little push.In both cases, the controller was able to reject the disturbance input (i.e. bring the system back to equilibrium after the disturbance input was applied).
+
+We can see that the SIMO controller is significantly more stable than the SISO controller. As you can see in the plots above, both the cart position and pendulum oscillate for the SISO controller while the cart position and pendulum angle stay very close to zero without oscillation. This is presumably because the SIMO controller has a greater ability to estimate the state with two outputs rather, leading to faster error convergence in the observer.
