@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Frequency Domain Control of an Inverted Pendulum
-description: This article provides a walk-through of controller design for an inverted pendulum using frequency domain methods frequency domain methods
+description: This article provides a walk-through of controller design for an inverted pendulum using frequency domain methods.
 img: assets/img/inverted_pendulum/inverted_pendulum.png
 importance: 4
 category: work
