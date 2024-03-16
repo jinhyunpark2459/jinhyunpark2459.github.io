@@ -136,7 +136,7 @@ y=Cx
 $$
 
 $$
-\hat{\dot{x}}=(A-BK-LC)\hat{x}+Ly
+\dot{\hat{x}}=(A-BK-LC)\hat{x}+Ly
 $$
 
 $$
