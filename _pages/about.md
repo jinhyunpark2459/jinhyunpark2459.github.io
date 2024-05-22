@@ -15,7 +15,7 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-👋 I'm a senior studying [mechanical engineering](https://www.mae.cornell.edu/mae) at [Cornell University](https://www.cornell.edu/) with a focus in dynamics & control. This website is a platform where I upload my personal projects! So far, this includes dynamics simulations coded using MATLAB, control of an inverted pendulum, and a series of lab write-ups for a robotics course I took at Cornell, where I built a robot car capable of mapping its surroundings and navigating autonomously within it.
+👋 I'm a senior studying [mechanical engineering](https://www.mae.cornell.edu/mae) at [Cornell University](https://www.cornell.edu/) with a focus in dynamics & control. This website is a platform where I upload my personal projects! So far, this includes projects related to dynamics simulations, controller design, robotics, and estimation filters.   
 
 **Programming Languages**: MATLAB, C++, Python, Java
 <br><br>
