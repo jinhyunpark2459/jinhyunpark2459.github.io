@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Applications of Kalman Filtering in Financial Markets
-date: 2024-05-22 17:39:00
 description:
+img: assets/img/inverted_pendulum/inverted_pendulum.png
 redirect: /assets/pdf/MBE_Final_Project.pdf
 ---
