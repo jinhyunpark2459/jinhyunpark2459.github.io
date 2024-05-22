@@ -7,6 +7,6 @@ importance: 4
 category: work
 ---
 
-[Download PDF](https://drive.google.com/file/d/1DP6APVClArlMo3cvOM8gml0xBegnx5Rr/view?usp=sharing)
+[Download PDF](assets/pdf/MBE_Final_Project.pdf)
 
-<iframe src="https://pdf.ac/3iQtaZ" width="100%" height="600px"></iframe>
+<iframe src="assets/pdf/MBE_Final_Project.pdf" width="100%" height="600px"></iframe>
