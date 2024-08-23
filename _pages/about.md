@@ -15,9 +15,9 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-👋 I'm a senior studying [mechanical engineering](https://www.mae.cornell.edu/mae) at [Cornell University](https://www.cornell.edu/) with a focus in dynamics & control. This website is a platform where I upload my personal projects! So far, this includes projects related to dynamics simulations, controller design, robotics, and estimation filters.   
+👋 I'm a master's student studying mechanical engineering at [Cornell University](https://www.cornell.edu/) with a focus in dynamics & control and robotics. This website is a platform where I upload my personal projects! So far, this includes projects related to dynamics simulations, controller design, robotics, and estimation filters.   
 
-**Programming Languages**: MATLAB, C++, Python, Java
+**Programming Languages**: MATLAB, C++, C, Python, Java
 <br><br>
 **Skills**: Simulink, Robot Operating System (ROS), SOLIDWORKS, Fusion 360, ANSYS Mechanical
 
