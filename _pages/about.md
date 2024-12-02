@@ -17,7 +17,7 @@ social: true  # includes social icons at the bottom of the page
 ---
 👋 I'm a master's student studying mechanical engineering at [Cornell University](https://www.cornell.edu/) with a focus in dynamics & control and robotics. This website is a platform where I upload my personal projects! So far, this includes projects related to dynamics simulations, controller design, robotics, and estimation filters.   
 
-**Programming Languages**: MATLAB, C++, C, Python, Java
+**Programming Languages**: Python, Java, C++, C, MATLAB
 <br><br>
 **Skills**: Simulink, Robot Operating System (ROS), SOLIDWORKS, Fusion 360, ANSYS Mechanical
 
