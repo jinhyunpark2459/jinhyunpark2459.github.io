@@ -3,17 +3,16 @@
 
   <!-- Head -->
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="3; url=/">    <!-- Metadata, OpenGraph and Schema.org -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
     
 
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Nonlinear Control of a Two-link Planar Manipulator | Addy (Jin Hyun)  Park</title>
+    <title>Successive Convexification for Fuel-Optimal Rocket Landing | Addy (Jin Hyun)  Park</title>
     <meta name="author" content="Addy (Jin Hyun)  Park">
-    <meta name="description" content="Nonlinear control of a two-link planar manipulator using feedback linearization and Linear-Quadratic Regulator. Still a work in progress!">
+    <meta name="description" content="Implementation of a Sequential Convex Programming (SCP) algorithm for fuel-optimal rocket landing.">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -39,7 +38,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://jinhyunpark2459.github.io/projects/multi_project/">
+    <link rel="canonical" href="https://jinhyunpark2459.github.io/projects/rocket_landing/">
 
     <!-- Dark Mode -->
     
@@ -107,27 +106,37 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <!-- _layouts/post.html -->
+        <!-- page.html -->
+        <div class="post">
 
-<div class="post">
+          <header class="post-header">
+            <h1 class="post-title">Successive Convexification for Fuel-Optimal Rocket Landing</h1>
+            <p class="post-description">Implementation of a Sequential Convex Programming (SCP) algorithm for fuel-optimal rocket landing.</p>
+          </header>
 
-  <header class="post-header">
-    <h1 class="post-title">Nonlinear Control of a Two-link Planar Manipulator</h1>
-    <p class="post-meta">February 24, 2025</p>
-    <p class="post-tags">
-      <a href="/blog/2025"> <i class="fas fa-calendar fa-sm"></i> 2025 </a>
+          <article>
+            <p>I recently developed an interest in GNC applications for convex programming and implemented an SCP algorithm for a fuel-optimal rocket landing. While my implementation began using MATLAB and was almost convergent, I adopted Sven Niederberger’s implementation in Python which automates symbolic calculations. I modified his implmentation to implement lossless convexification and also include aerodynamic effects. The modified code is <a href="https://jinhyunpark2459.github.io/assets/pdf/two_link_manipulator.pdf">here</a> and my write-up of the project is <a href="https://jinhyunpark2459.github.io/assets/pdf/two_link_manipulator.pdf">here</a>.</p>
 
-    </p>
-  </header>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        
 
-  <article class="post-content">
-    
-    <div id="markdown-content">
-      
+<figure>
+
+  
+
+  <video src="/assets/video/SCvx_Simulation.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" controls=""></video>
+
+  
+
+</figure>
 
     </div>
-  </article>
 </div>
+
+          </article>
+
+        </div>
 
       
     </div>
