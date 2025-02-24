@@ -15,7 +15,7 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-👋 I'm a master's student studying mechanical engineering at [Cornell University](https://www.cornell.edu/) with a focus in dynamics & control and robotics. This website is a platform where I upload my personal projects. So far, this includes projects related to dynamics simulations, controller design, and robotics.  
+👋 I'm a recent graduate with a master's degree in mechanical engineering from [Cornell University](https://www.cornell.edu/) with a focus in dynamics & control and robotics. This website is a platform where I upload my personal projects. So far, this includes projects related to dynamics simulations, controller design, and robotics. 
 
 **Programming Languages**: Python, Java, C++, C, MATLAB
 <br><br>

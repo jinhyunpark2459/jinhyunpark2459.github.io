@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Various projects that I've worked on in the past year.
+description: Various projects that I've worked on during my undergrad and master's program.
 nav: true
 nav_order: 2
 display_categories:
