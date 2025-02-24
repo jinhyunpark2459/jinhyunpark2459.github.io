@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Classical Control of an Inverted Pendulum
-description: This article provides a walk-through of controller design for an inverted pendulum using classical control techniques in the frequency domain.
+description: Controller design for an inverted pendulum using classical control techniques.
 img: assets/img/inverted_pendulum/inverted_pendulum.png
 importance: 4
 category: work

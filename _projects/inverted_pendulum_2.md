@@ -1,7 +1,7 @@
 ---
 layout: page
 title: State-Space Control of an Inverted Pendulum
-description: This article provides a walk-through of controller design for an inverted pendulum using state-space methods.
+description: Controller design for an inverted pendulum using pole placement.
 img: assets/img/inverted_pendulum/inverted_pendulum.png
 importance: 4
 category: work
