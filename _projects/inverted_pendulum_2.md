@@ -3,7 +3,7 @@ layout: page
 title: State-Space Control of an Inverted Pendulum
 description: Controller design for an inverted pendulum using pole placement.
 img: assets/img/inverted_pendulum/inverted_pendulum.png
-importance: 4
+importance: 9
 category: work
 ---
 
