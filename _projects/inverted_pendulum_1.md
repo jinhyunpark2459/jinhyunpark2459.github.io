@@ -3,7 +3,7 @@ layout: page
 title: Classical Control of an Inverted Pendulum
 description: Controller design for an inverted pendulum using classical control techniques.
 img: assets/img/inverted_pendulum/inverted_pendulum.png
-importance: 7
+importance: 8
 category: work
 ---
 
